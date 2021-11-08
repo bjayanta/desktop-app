@@ -1,11 +1,11 @@
 import { BrowserRouter } from "react-router-dom"
-
 import Navigation from './pages/partials/Navigation'
 import RouterArea from './pages/partials/RouterArea'
 
-function App() {
+function App(props) {
+
   return (
-    <div>
+    <div className="bg-gray-400 h-full">
 
       <BrowserRouter>
         <Navigation />
@@ -14,6 +14,7 @@ function App() {
 
     </div>
   );
+
 }
 
 export default App;

@@ -25,10 +25,15 @@ install package:
 > yarn add electron-builder --dev
 > yarn add electron-is-dev
 
-install css library/framework:
---------------------------------------------------------------
-> yarn add bootstrap
+install css library/framework
 
+install electron-reload:
+--------------------------------------------------------------
+> yarn add electron-reload
+
+install icons:
+--------------------------------------------------------------
+https://github.com/tailwindlabs/heroicons
 
 Tutorials:
 -----------------------------------------------------------------
