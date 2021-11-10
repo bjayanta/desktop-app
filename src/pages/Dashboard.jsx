@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
+import AppLayout from '../components/AppLayout'
 
 export default class Dashboard extends Component {
     
     render() {
+        console.log(this.context);
+
         return (
-            <div>
-                <h2 className="m-10 p-6 text-blue-400">Dashboard adfasdf</h2>
-            </div>
+            <AppLayout>
+                <h2>Dashboard </h2>
+
+                <div>
+                    <button>Sign out</button>
+                </div>
+            </AppLayout>
         )
     }
 }

@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import AuthLayout from '../../components/AuthLayout'
 
 export default class Login extends Component {
     render() {
         return (
-            <div>
+            <AuthLayout>
                 <form>
                     <div>
                         <label htmlFor="email">Email</label>
@@ -17,7 +18,7 @@ export default class Login extends Component {
 
                     <button type="submit">Login</button>
                 </form>
-            </div>
+            </AuthLayout>
         )
     }
 }

@@ -1,7 +1,7 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow } = require('electron');
+require('electron-reload')(__dirname);
 const path = require('path');
 const isDev = require('electron-is-dev');
-const { electron } = require('process');
 
 // in the main process:
 require('@electron/remote/main').initialize()
@@ -12,11 +12,13 @@ function createWindow() {
 
     // Create the brower window.
     const win = new BrowserWindow({
-        width: Math.round(width * 0.4),
-        height: Math.round(height * 0.6),
+        title: "My Electron App",
+        // titleBarStyle: 'hidden',
+        width: Math.round(width * 0.9),
+        height: Math.round(height * 0.9),
+        show: false,
         // minWidth: 800,
         // minHeight: 600,
-        title: "My Electron App",
         // frame: false,
         webPreferences: {
             nodeIntegration: true,
@@ -26,13 +28,33 @@ function createWindow() {
         }
     });
 
+    // create a new `splash`-Window 
+    const splash = new BrowserWindow({
+        width: 400, 
+        height: 500, 
+        transparent: true, 
+        frame: false, 
+        resizable: false,
+        // alwaysOnTop: true
+    });
+
+    // load splash screen 
+    splash.loadURL(isDev ? `file://${path.join(__dirname, './splash.html')}` : `file://${path.join(__dirname, '../build/splash.html')}`);
+
+    // main window
     // win.loadURL('http://localhost:3000');
     win.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
-}
 
-ipcMain.on('msg', (event, data) => {
-    console.warn(data);
-});
+    // if main window is ready to show, 
+    // then destroy the splash window and show up the main window
+    win.once('ready-to-show', () => {
+        setTimeout(function() { 
+            splash.destroy();
+            // splash.close();
+            win.show();
+        }, 5000);
+    });
+}
 
 app.on('ready', createWindow);
 

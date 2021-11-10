@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
+import PublicRoute from './PublicRoute'
+import PrivateRoute from './PrivateRoute'
+
 // pages
 import Login from "../auth/Login";
 import Register from "../auth/Register";
@@ -10,18 +13,29 @@ import PageNotFound from "../PageNotFound";
 export default class RouterArea extends Component {
 
     render() {
+        const { navigation } = this.props;
+        console.log(navigation);
+
         return (
             <div>
                 <Routes>
-                    {/* auth */}
-                    <Route path="/login" element={ <Login /> } />
-                    <Route path="/register" element={ <Register /> } />
+                    {/* public(auth) route */}
+                    {/* <Route path="/register" element={ <Register /> } /> */}
+                    <Route path="/login" element={ <PublicRoute /> }>
+                        <Route path='/login' element={ <Login /> } />
+                    </Route>
 
-                    {/* protceted */}
-                    <Route path="/" element={ <Dashboard /> } />
+                    <Route path="/register" element={ <PublicRoute /> }>
+                        <Route path='/register' element={ <Register /> } />
+                    </Route>
+
+                    {/* private route */}
+                    <Route path='/' element={ <PrivateRoute/> }>
+                        <Route path='/' element={ <Dashboard/> } />
+                    </Route>
 
                     {/* 404 */}
-                    <Route element={ <PageNotFound /> } />
+                    <Route path="*" element={ <PageNotFound /> } />
                 </Routes>
             </div>
         )
