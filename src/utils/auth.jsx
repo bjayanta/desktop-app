@@ -4,15 +4,17 @@
 // sessionStorage.clear();
 
 export const auth = {
-    isAuthenticated: false,
+    isAuthenticated: sessionStorage.getItem("isAuthenticated"),
 
     login(callBack) {
-        auth.isAuthenticated = true;
+        sessionStorage.setItem("isAuthenticated", true);
+        auth.isAuthenticated = sessionStorage.getItem("isAuthenticated");
         callBack();
     },
 
     logout(callBack) {
-        auth.isAuthenticated = false;
+        sessionStorage.setItem("isAuthenticated", false);
+        auth.isAuthenticated = sessionStorage.getItem("isAuthenticated");
         callBack();
     }
 }

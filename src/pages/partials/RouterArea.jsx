@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
+// custom routes
 import PublicRoute from './PublicRoute'
 import PrivateRoute from './PrivateRoute'
 
@@ -10,33 +11,36 @@ import Register from "../auth/Register";
 import Dashboard from "../Dashboard";
 import PageNotFound from "../PageNotFound";
 
+import AuthContext from '../../contexts/authContext'
+
 export default class RouterArea extends Component {
 
     render() {
-        const { navigation } = this.props;
-        console.log(navigation);
-
         return (
             <div>
-                <Routes>
-                    {/* public(auth) route */}
-                    {/* <Route path="/register" element={ <Register /> } /> */}
-                    <Route path="/login" element={ <PublicRoute /> }>
-                        <Route path='/login' element={ <Login /> } />
-                    </Route>
+                <AuthContext.Consumer>
+                    {context => (
+                    <Routes>
+                        {/* public(auth) route */}
+                        {/* <Route path="/register" element={ <Register /> } /> */}
+                        <Route path="/login" element={ <PublicRoute auth={context.isAuthenticated} /> }>
+                            <Route path='/login' element={ <Login /> } />
+                        </Route>
 
-                    <Route path="/register" element={ <PublicRoute /> }>
-                        <Route path='/register' element={ <Register /> } />
-                    </Route>
+                        <Route path="/register" element={ <PublicRoute auth={context.isAuthenticated} /> }>
+                            <Route path='/register' element={ <Register /> } />
+                        </Route>
 
-                    {/* private route */}
-                    <Route path='/' element={ <PrivateRoute/> }>
-                        <Route path='/' element={ <Dashboard/> } />
-                    </Route>
+                        {/* private route */}
+                        <Route path='/' element={ <PrivateRoute auth={context.isAuthenticated} /> }>
+                            <Route path='/' element={ <Dashboard/> } />
+                        </Route>
 
-                    {/* 404 */}
-                    <Route path="*" element={ <PageNotFound /> } />
-                </Routes>
+                        {/* 404 */}
+                        <Route path="*" element={ <PageNotFound /> } />
+                    </Routes>
+                    )}
+                </AuthContext.Consumer>
             </div>
         )
     }

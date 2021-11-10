@@ -1,7 +1,8 @@
 const { app, BrowserWindow } = require('electron');
-require('electron-reload')(__dirname);
 const path = require('path');
 const isDev = require('electron-is-dev');
+
+require('electron-reload')(__dirname);
 
 // in the main process:
 require('@electron/remote/main').initialize()
