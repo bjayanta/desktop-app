@@ -1,22 +1,44 @@
 import React, { Component } from 'react'
 import AuthLayout from '../../components/AuthLayout'
-import { auth } from '../../utils/auth'
+import { Navigate, Redirect } from "react-router-dom";
+import { auth } from '../../utils/authService'
 
-export default class Login extends Component {
+class Login extends Component {
 
-    login = () => {
-        console.log(auth.isAuthenticated);
+    constructor(props) {
+        super(props);
 
-        auth.login( () => {
-            console.log(auth.isAuthenticated);
-            this.props.navigation.navigate('/');
+        this.state = {
+            isAuthenticated: auth.isAuthenticated
+        }
+    }
+
+    loginHandler = () => {
+        console.log(auth);
+
+        auth.login(() => {
+            console.log(auth);
         });
+
+        this.setState({
+            isAuthenticated: true
+        })
     }
 
     render() {
+
+        if(this.state.isAuthenticated === true) {
+            // this.props.history.push('/');
+            // return (<Navigate to="/" />);
+            return (<Redirect to="/" />);
+        }
+
         return (
             <AuthLayout>
                 <form>
+                    <h1>Login </h1>
+                    <h4>Login {auth.isAuthenticated}</h4>
+
                     <div>
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" name="email" />
@@ -27,7 +49,7 @@ export default class Login extends Component {
                         <input type="password" id="password" name="password" />
                     </div>
 
-                    <button type="button" onClick={ this.login } className="bg-gray-400 text-black px-8 py-2 hover:bg-gray-600 hover:text-white">
+                    <button type="button" onClick={ this.loginHandler } className="bg-gray-400 text-black px-8 py-2 hover:bg-gray-600 hover:text-white">
                         Login
                     </button>
                 </form>
@@ -35,3 +57,5 @@ export default class Login extends Component {
         )
     }
 }
+
+export default Login;

@@ -2,10 +2,10 @@ import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 
 const PrivateRoute = (props) => {
-    console.log(props);
+    console.log(props.auth, typeof props.auth);
 
     // determine if authorized, from context or however you're doing it
-    const auth = props.auth; 
+    const auth = props.auth === 'true' ? true : false;
 
     // If authorized, return an outlet that will render child elements
     // If not, return element that will navigate to login page

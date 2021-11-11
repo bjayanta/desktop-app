@@ -1,29 +1,46 @@
 import React, { Component } from 'react'
 import AppLayout from '../components/AppLayout'
-import AuthContext from '../contexts/authContext'
+import { auth } from '../utils/authService'
+import { Navigate, Redirect } from 'react-router-dom'
 
-export default class Dashboard extends Component {
-    static contextType = AuthContext
+class Dashboard extends Component {
 
-    logout = () => {
-        console.log(this.context.isAuthenticated);
+    constructor(props) {
+        super(props);
 
-        this.context.logout( () => {
-            console.log(this.context.isAuthenticated);
-            this.props.navigation.navigate('/login');
+        this.state = {
+            isAuthenticated: auth.isAuthenticated
+        }
+    }
+
+    logoutHandler = () => {
+        console.log(auth);
+
+        auth.logout(() => {
+            console.log(auth);
         });
+
+        this.setState({
+            isAuthenticated: false
+        })
     }
 
     render() {
-        // const { isAuthenticated } = this.context;
-        // console.log(this.context);
+        console.log(this.props.history);
+
+        if(this.state.isAuthenticated === false) {
+            return (<Redirect to="/login" />);
+            // return (<Navigate to="/login" />);
+            // this.props.history.push('/login');
+        }
 
         return (
             <AppLayout>
                 <h2>Dashboard </h2>
+                <h4>Login {auth.isAuthenticated}</h4>
 
                 <div>
-                    <button type="button" onClick={this.logout}>
+                    <button type="button" onClick={ this.logoutHandler } className="bg-gray-400 text-black px-8 py-2 hover:bg-gray-600 hover:text-white">
                         Sign out
                     </button>
                 </div>
@@ -31,3 +48,5 @@ export default class Dashboard extends Component {
         )
     }
 }
+
+export default Dashboard;

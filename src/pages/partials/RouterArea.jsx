@@ -11,36 +11,32 @@ import Register from "../auth/Register";
 import Dashboard from "../Dashboard";
 import PageNotFound from "../PageNotFound";
 
-import AuthContext from '../../contexts/authContext'
+import { auth } from '../../utils/authService'
 
 export default class RouterArea extends Component {
 
     render() {
         return (
             <div>
-                <AuthContext.Consumer>
-                    {context => (
-                    <Routes>
-                        {/* public(auth) route */}
-                        {/* <Route path="/register" element={ <Register /> } /> */}
-                        <Route path="/login" element={ <PublicRoute auth={context.isAuthenticated} /> }>
-                            <Route path='/login' element={ <Login /> } />
-                        </Route>
+                <Routes>
+                    {/* public(auth) route */}
+                    {/* <Route path="/register" element={ <Register /> } /> */}
+                    <Route path="/login" element={ <PublicRoute auth={auth.isAuthenticated} /> }>
+                        <Route path='/login' element={ <Login /> } />
+                    </Route>
 
-                        <Route path="/register" element={ <PublicRoute auth={context.isAuthenticated} /> }>
-                            <Route path='/register' element={ <Register /> } />
-                        </Route>
+                    <Route path="/register" element={ <PublicRoute auth={auth.isAuthenticated} /> }>
+                        <Route path='/register' element={ <Register /> } />
+                    </Route>
 
-                        {/* private route */}
-                        <Route path='/' element={ <PrivateRoute auth={context.isAuthenticated} /> }>
-                            <Route path='/' element={ <Dashboard/> } />
-                        </Route>
+                    {/* private route */}
+                    <Route path='/' element={ <PrivateRoute auth={auth.isAuthenticated} /> }>
+                        <Route path='/' element={ <Dashboard/> } />
+                    </Route>
 
-                        {/* 404 */}
-                        <Route path="*" element={ <PageNotFound /> } />
-                    </Routes>
-                    )}
-                </AuthContext.Consumer>
+                    {/* 404 */}
+                    <Route path="*" element={ <PageNotFound /> } />
+                </Routes>
             </div>
         )
     }
