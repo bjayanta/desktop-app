@@ -1,14 +1,11 @@
 import React from 'react'
 import { Route, Redirect } from 'react-router-dom'
+import { auth } from "../../utils/authService";
 
-const PrivateRoute = ({ ...rest }) => {
-    return (
-        <Route {...rest} render={ ({props, location}) => {
-            sessionStorage.getItem("authToken") ? 
-            ( <Dashboard {...props} /> ) : 
-            ( <Redirect to={ {pathname: "/login", state: {from: location} } } /> )
-        } } />
-    );
+const PrivateRoute = ({ children, ...rest }) => {
+    const isAuth = auth.isAuthenticated;
+
+    return (<Route { ...rest } render={ () => isAuth ? (children) : (<Redirect to={'/login'} />) } />);
 };
 
 export default PrivateRoute;

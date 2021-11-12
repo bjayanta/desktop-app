@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
-import AppLayout from '../components/AppLayout'
+import AppLayout from '../Layouts/AppLayout'
 import { auth } from '../utils/authService'
 
 class Dashboard extends Component {

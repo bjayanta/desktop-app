@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
-import { auth } from '../../utils/authService'
+import { Route, Switch } from 'react-router-dom'
 
 // custom routes
-// import PublicRoute from './PublicRoute'
-// import PrivateRoute from './PrivateRoute'
+import AuthRoute from '../routes/AuthRoute'
+import PrivateRoute from '../routes/PrivateRoute'
 
 // pages
 import Login from "../auth/Login";
@@ -18,35 +17,15 @@ export default class RouterArea extends Component {
         return (
             <div>
                 <Switch>
-                    {/* public(auth) route */}
-                    <Route exact path="/" component={ Dashboard } />
+                    {/* private route */}
+                    <PrivateRoute exact path="/"><Dashboard /></PrivateRoute>
 
                     {/* Auth route */}
-                    {/* <Route exact path="/login" component={ Login } /> */}
-                    <Route exact path="/login">
-                        { auth.isAuthenticated ? <Redirect to='/' /> : <Login /> }
-                    </Route>
-
-                    {/* <Route exact path="/register" component={ Register } /> */}
-                    <Route exact path="/register">
-                        { auth.isAuthenticated ? <Redirect to='/' /> : <Register /> }
-                    </Route>
+                    <AuthRoute exact path="/login"><Login /></AuthRoute>
+                    <AuthRoute exact path="/register"><Register /></AuthRoute>
 
                     {/* 404 */}
                     <Route component={ PageNotFound } />
-
-                    {/* <Route path="/login" element={ <PublicRoute auth={auth.isAuthenticated} /> }>
-                        <Route path='/login' element={ <Login /> } />
-                    </Route> */}
-
-                    {/* <Route path="/register" element={ <PublicRoute auth={auth.isAuthenticated} /> }>
-                        <Route path='/register' element={ <Register /> } />
-                    </Route> */}
-
-                    {/* private route */}
-                    {/* <Route path='/' element={ <PrivateRoute auth={auth.isAuthenticated} /> }>
-                        <Route path='/' element={ <Dashboard/> } />
-                    </Route> */}
                 </Switch>
             </div>
         )
