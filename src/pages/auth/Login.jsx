@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router-dom'
 import AuthLayout from '../../components/AuthLayout'
-import { Navigate, Redirect } from "react-router-dom";
 import { auth } from '../../utils/authService'
 
 class Login extends Component {
@@ -9,44 +9,40 @@ class Login extends Component {
         super(props);
 
         this.state = {
-            isAuthenticated: auth.isAuthenticated
+            email: '',
+            password: '',
         }
+    }
+
+    inputHandler = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+
     }
 
     loginHandler = () => {
-        console.log(auth);
-
         auth.login(() => {
-            console.log(auth);
+            this.props.history.push('/');
         });
-
-        this.setState({
-            isAuthenticated: true
-        })
     }
 
     render() {
-
-        if(this.state.isAuthenticated === true) {
-            // this.props.history.push('/');
-            // return (<Navigate to="/" />);
-            return (<Redirect to="/" />);
-        }
+        console.log(auth);
 
         return (
             <AuthLayout>
                 <form>
                     <h1>Login </h1>
-                    <h4>Login {auth.isAuthenticated}</h4>
 
                     <div>
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" name="email" />
+                        <input type="email" id="email" name="email" onChange={ this.inputHandler } />
                     </div>
 
                     <div>
                         <label htmlFor="password">Password</label>
-                        <input type="password" id="password" name="password" />
+                        <input type="password" id="password" name="password" onChange={ this.inputHandler } />
                     </div>
 
                     <button type="button" onClick={ this.loginHandler } className="bg-gray-400 text-black px-8 py-2 hover:bg-gray-600 hover:text-white">
@@ -58,4 +54,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default withRouter(Login);

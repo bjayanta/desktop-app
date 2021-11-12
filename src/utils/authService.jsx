@@ -1,21 +1,19 @@
-// sessionStorage.setItem("key", "value");
-// var lastname = sessionStorage.getItem("key");
-// sessionStorage.removeItem("key");
-// sessionStorage.clear();
-
 export const auth = {
-    isAuthenticated: sessionStorage.getItem("isAuthenticated") ?? false,
+    isAuthenticated: (sessionStorage.getItem("authToken") != null) ? true : false,
 
     login(callBack) {
-        sessionStorage.setItem("isAuthenticated", true);
-        auth.isAuthenticated = (sessionStorage.getItem("isAuthenticated").toLowerCase() === 'true');
+        sessionStorage.setItem("authToken", "abcdefghijklmnopqusruvwxyz");
+        auth.isAuthenticated = (sessionStorage.getItem("authToken") != null) ? true : false;
 
         callBack();
     },
 
     logout(callBack) {
-        sessionStorage.setItem("isAuthenticated", false);
-        auth.isAuthenticated = (sessionStorage.getItem("isAuthenticated").toLowerCase() === 'true');
+        // sessionStorage.setItem("authToken", false);
+        sessionStorage.removeItem("authToken");
+        sessionStorage.clear();
+
+        auth.isAuthenticated = (sessionStorage.getItem("authToken") != null) ? true : false;
 
         callBack();
     }
