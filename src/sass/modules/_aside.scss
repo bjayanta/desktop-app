@@ -1,0 +1,103 @@
+// variables
+@import '../helpers/variables';
+
+// main aside style
+.page-aside{
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: $white-color;
+    position: fixed;
+    left: 0;
+    transition: all linear 0.1s;
+    z-index: 99;
+    border-right: 1px solid $border-color;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+        background-color: $gray-color;
+        border-radius: 20px;
+    }
+    // border-right: 1px solid $border-color;
+    .aside-brand{
+        margin-bottom: 30px;
+        padding: 0 20px;
+        img{
+            width: 156px;
+        }
+    }
+    ul{
+        padding: 0;
+        list-style-type: none;
+        border: none;
+    }
+    
+    .nav-link, .sigle-nav-link{
+        padding: 10px 20px;
+        color: $black-color;
+        display: flex;
+        align-items: center;
+        transition: all linear .1s;
+        &:hover{
+            text-decoration: none;
+            color: $primary-color;
+            letter-spacing: 1px;
+        }
+        &.active{
+            font-weight: bold;
+        }
+    }
+    .nav-link{
+        padding: 5px 0 5px 50px;
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            background-color: $secondary-color;
+            width: 4px ;
+            height: 4px;
+            left: 28px;
+            top: 13px;
+            border-radius: 10px;
+        }
+    }
+    a{
+        i{
+            font-size: 20px;
+            width: 20px;
+            margin-right: 10px;
+            line-height: 0;
+        }
+    }
+    @media (max-width: 992px) {
+        left: -250px;
+    }
+    &.hide{
+        left: -250px ;
+        @media (max-width: 992px) {
+            left: 0;
+        }
+    }
+}
+.page-aside-layer{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: $black-color;
+    opacity: .3;
+    z-index: 9;
+    transition: all linear .2s;
+    display: none;
+    &.show{
+        @media (max-width: 992px) {
+            display: block;
+        }
+    }
+}

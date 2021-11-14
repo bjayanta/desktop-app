@@ -1,19 +1,26 @@
 import { BrowserRouter } from "react-router-dom"
-// import Navigation from './pages/partials/Navigation'
-import RouterArea from './pages/partials/RouterArea'
+import Routing from './subduing/Routing'
 
 function App() {
-  console.log(sessionStorage.getItem("authToken"));
+  // versions
+  console.log(window.versions);
+
+  // IPC
+  // send data render-process to main-process
+  window.api.send("toMain", 100);
+
+  // get data from main-process
+  window.api.receive("fromMain", (data) => {
+    console.log(data);
+  });
 
   return (
-    <div>
+    <> 
       <BrowserRouter>
-          {/* <Navigation /> */}
-          <RouterArea />
+          <Routing />
       </BrowserRouter>
-    </div>
+    </>
   );
-
 }
 
 export default App;

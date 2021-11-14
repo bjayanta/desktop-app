@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import AppLayout from '../Layouts/AppLayout'
-import { auth } from '../utils/authService'
+import AppLayout from '../layouts/AppLayout'
+import { auth } from '../services/authService'
 
 import Dropdown from '../components/Dropdown'
 
@@ -20,6 +20,7 @@ class Dashboard extends Component {
             <AppLayout>
                 <h2>Dashboard </h2>
                 <h4>Login </h4>
+                <p>Node V{ window.versions.node }, Electron V{ window.versions.electron }, V8 engine V{ window.versions.electron }</p>
 
                 <div>
                     <button type="button" onClick={ this.logoutHandler } className="bg-gray-400 text-black px-8 py-2 hover:bg-gray-600 hover:text-white">

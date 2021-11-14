@@ -1,0 +1,29 @@
+// variables
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+
+// main style
+.invoice{
+    width: 796px;
+    margin: 0 auto;
+    .card{
+        .card-header{
+            background-color: $background-color;
+        }
+        .card-body{
+            .single{
+                color: $secondary-color;
+                margin-right: 5px;
+                font-size: 15px;
+                margin-right: 10px;
+                padding: 5px 0;
+                span{
+                    display: inline-block;
+                    width: 170px;
+                }
+            }
+        }
+    }
+}

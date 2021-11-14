@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import AuthLayout from '../../Layouts/AuthLayout'
+import AuthLayout from '../../layouts/AuthLayout'
 
 export default class Register extends Component {
     render() {

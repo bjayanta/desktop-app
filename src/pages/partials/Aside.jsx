@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { PaperAirplaneIcon } from '@heroicons/react/outline'
 import Dropdown from '../../components/Dropdown'
 
 export default class Aside extends Component {
@@ -10,7 +9,7 @@ export default class Aside extends Component {
             <>
                 {/* brand or logo */}
                 <Link to="#" className="text-white flex items-center px-4 space-x-2">
-                    <PaperAirplaneIcon className="h-6 w-6" />
+                    Icon
                     <span className="text-2xl font-extrabold">MaxSOP</span>
                 </Link>
                 

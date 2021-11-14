@@ -1,0 +1,158 @@
+// variables
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+*:focus{
+    box-shadow: none !important;
+}
+.form-control, .form-select, .input-group-text{
+    padding: 7px 10px;
+    min-height: 20px;
+    font-size: $regular-size;
+    border-radius: 2px;
+    &:focus{
+        color: $secondary-color !important;
+        background-color: #fff;
+        outline: 2px $primary-color;
+        border: 1px solid $primary-color;
+        z-index: 1;
+    }
+}
+.is-valid{
+    &:focus{
+        box-shadow: 0 0 0 2px rgba(44,160,28,.25) !important;
+    }
+}
+.is-invalid{
+    &:focus{
+        box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.199) !important;
+    }
+}
+.form-select{
+    cursor: pointer;
+}
+.form-label,
+.form-check-label {
+    margin-bottom: 5px;
+    font-size: $regular-size;
+}
+.form-check-label{
+    cursor: pointer;
+}
+.input-group{
+    position: relative;
+    .pass-eye{
+        position: absolute;
+        right: 10px;
+        top: 3px;
+        color: $secondary-color;
+        z-index: 10;
+        font-size: 18px;
+    }
+}
+input[type="checkbox"]{
+    cursor: pointer;
+    &:focus{
+        box-shadow: 0 0 0 2px rgba(44,160,28,.25);
+    }
+}
+input[type="checkbox"]:checked{
+    border: none;
+    background-color: $primary-color;
+}
+input[type="radio"]{
+    cursor: pointer;
+    &:focus{
+        box-shadow: 0 0 0 2px rgba(44,160,28,.25);
+    }
+}
+input[type="radio"]:checked{
+    border: none;
+    background-color: $primary-color;
+}
+.input-group-text{
+    background-color: $border-color;
+    color: $secondary-color;
+}
+.required{
+    position: relative;
+    &::after{
+        content: '*';
+        position: absolute;
+        right: -10px;
+        top: 0;
+        color: red;
+    }
+}
+.custom-btn{
+    padding: 5px 10px;
+    box-shadow: 5px 5px 20px rgba(128, 128, 128, 0.308);
+    transition: all linear .2s;
+    &:hover{
+        text-decoration: none;
+    }
+}
+.btn-success{
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    color: $white-color;
+    &:hover{
+        background-color: $primary-color;
+        color: $white-color;
+        opacity: .9;
+    }
+    &:focus{
+        background-color: $primary-color;
+        color: $white-color;
+        opacity: .9;
+    }
+}
+.btn-danger{
+    background-color: red;
+    border: 1px solid red;
+    color: $white-color;
+    &:hover{
+        background-color: red;
+        color: $white-color;
+        opacity: .7;
+    }
+    &:focus{
+        background-color: red;
+        color: $white-color;
+        opacity: .7;
+    }
+}
+.custom-btn-outline{
+    background-color: transparent;
+    color: $secondary-color;
+    border: 1px solid $primary-color;
+    box-shadow: none;
+}
+.btn-rounded{
+    border-radius: 36px;
+    padding: 3px 20px;
+}
+
+
+.tag {
+    display: inline-block;
+    padding: 0 5px;
+    position: relative;
+    border-radius: 0.25em;
+    .tag-txt {
+        font-size: 0.85em;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        padding-right: 5px;
+    }
+    .btn-close {
+        cursor: pointer;
+    }
+    .tag-input {
+        top: 0;
+        left: 0;
+        position: absolute;
+        visibility: hidden;
+    }
+}
