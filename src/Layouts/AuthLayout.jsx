@@ -6,6 +6,7 @@ import '../sass/authentication.scss'
 export default class AuthLayout extends Component {
 
     state = {
+        error: false,
         show: false
     };
 
@@ -24,11 +25,13 @@ export default class AuthLayout extends Component {
 
                     {/* main wrapper */}
                     <div className="wrapper">
-                        {/* alert */}
-                        <div className="alert alert-danger p-2 mb-0 border-0 rounded-0" role="alert">
-                            Link simple danger alert—check it out!
-                        </div> 
-
+                        {/* alert message */}
+                        { this.state.error ? (
+                            <div className="alert alert-danger p-2 mb-0 border-0 rounded-0" role="alert">
+                                Link simple danger alert—check it out!
+                            </div> 
+                        ) : '' }
+                        
                         <div className="wrap-content">
                             <div className="p-4 pt-2">
                                 {/* Brand logo */}
