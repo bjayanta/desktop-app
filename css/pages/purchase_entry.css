@@ -1,0 +1,29 @@
+.purchase-new-entry .card .card-header {
+  background-color: #f9f9f9;
+}
+.purchase-new-entry .bank-inactive, .purchase-new-entry .cash-inactive {
+  display: none;
+}
+.purchase-new-entry .input-active {
+  display: block;
+}
+.purchase-new-entry .warehouse-wrapper {
+  height: 130px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.purchase-new-entry .warehouse-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+.purchase-new-entry .warehouse-wrapper::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.purchase-new-entry .warehouse-wrapper:hover::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 20px;
+}
+.purchase-new-entry .warehouse-wrapper .input-group-text {
+  width: 50px;
+}
+
+/*# sourceMappingURL=purchase_entry.css.map */

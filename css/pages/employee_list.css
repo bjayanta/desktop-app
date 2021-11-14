@@ -1,0 +1,14 @@
+.employee-list-wrap .employee {
+  border: 2px solid #2CA01C;
+  padding: 12px;
+  border-radius: 12px;
+  margin-top: 22px;
+}
+.employee-list-wrap .employee img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=employee_list.css.map */

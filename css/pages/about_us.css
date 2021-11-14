@@ -1,0 +1,39 @@
+h4 {
+  color: #2F4858;
+}
+
+.title {
+  color: #2F4858;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+}
+.title::after {
+  width: 600px;
+  height: 3px;
+  content: "";
+  background-color: #2CA01C;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.title span {
+  color: #2CA01C;
+}
+
+.credit-area .credit-person {
+  text-align: center;
+}
+.credit-area .credit-person img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+.credit-area .credit-person .sub-title {
+  width: 130px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=about_us.css.map */

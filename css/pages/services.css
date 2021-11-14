@@ -1,0 +1,34 @@
+.services-item {
+  margin-bottom: 50px;
+}
+.services-item .icon {
+  font-size: 32px;
+  margin-right: 10px;
+  line-height: 0;
+  color: #2CA01C;
+  transition: all linear 0.2s;
+}
+.services-item p {
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+.services-item p:first-child {
+  color: #2CA01C;
+}
+.services-item:hover .icon {
+  margin-top: 20px;
+}
+
+.portfolio .portfolio-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: all linear 0.2s;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+.portfolio .portfolio-item img:hover {
+  border-color: #2CA01C;
+}
+
+/*# sourceMappingURL=services.css.map */

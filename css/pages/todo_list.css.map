@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../sass/pages/todo_list.scss","../../sass/helpers/_variables.scss","../../sass/helpers/_mixins.scss"],"names":[],"mappings":"AAIA;EACI;EACA;EACA;;AAEI;EACI,OCRM;EDSN;;AAGR;EACI;EACA;;AACA;EACI;EACA;EACA;EEnBR;EACA,aFmBwC;EElBxC,iBAHwD;EAIxD,WAJgF;EAKhF,gBALyG;;AFsBjG;EACI;EACA;EACA;EACA;;AACA;EACI;EACA,OCvBP","file":"todo_list.css"}

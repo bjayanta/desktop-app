@@ -1,0 +1,217 @@
+// font CDN ===================================>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.maateen.me/solaiman-lipi/font.css');
+// End font CDN ===============================>
+
+// variables import
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+::-moz-selection {
+    color: $white-color;
+    background: $primary-color;
+}
+
+::selection {
+    color: $white-color;
+    background: $primary-color;
+}
+
+// Start global style
+body{
+    // typography
+    font-family: 'Roboto', 'SolaimanLipi', sans-serif !important; 
+    background-color: $background-color;
+    overflow-x: hidden;
+    hr{
+        margin: 0 !important;
+    }
+    h1,h2,h3,h4,h5,h6,p{
+        margin: 0;
+    }
+    .text-small{
+        font-size: $small-size;
+    }
+    .regular-size{
+        font-size: $regular-size;
+    }
+    a{
+        color: $primary-color;
+        text-decoration: none;
+        font-size: $regular-size;
+        &:hover{
+            text-decoration: underline;
+            color: $primary-color;
+        }
+    }
+
+    // alert
+    .alert{
+        padding: 10px;
+        text-align: center;
+    }
+
+
+    // icons
+    .top-icon-button{
+        padding: 5px;
+        line-height: 0;
+        font-size: 22px;
+        color: $gray-color;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+
+    // card
+    .card{
+        background-color: $background-color;
+        .card-header{
+            background-color: $background-color;
+        }
+        
+        .card-footer{
+            background-color: $background-color;
+            border-top: none;
+        }
+    }
+
+    // main title
+    .main-title{
+        color: $secondary-color;
+        font-weight: 400;
+        position: relative;
+        display: inline;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+    // mainbar
+    .mainbar{
+        margin-left: 250px;
+        transition: all linear .1s;
+        min-height: 100vh;
+        @media (max-width: 992px){
+            margin-left: 0;
+        }
+        .nav-tabs{
+            .nav-item{
+                .nav-link{
+                    border: none;
+                    color: $secondary-color;
+                    background-color: transparent;
+                    &:hover{
+                        text-decoration: none;
+                        border: none;
+                        color: $primary-color;
+                    }
+                    &.active{
+                        border-bottom: 3px solid $primary-color;
+                        position: relative;
+                        &:hover{
+                            border-bottom: 3px solid $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+        &.expand{
+            margin-left: 0;
+        }
+    }
+    // pagination
+    .pagination{
+        .page-item{
+            .page-link{
+                background-color: $background-color;
+                color: $gray-color;
+                border: none;
+                font-size: 16px;
+                &:focus{
+                    box-shadow: none;
+                }
+                &:hover{
+                    text-decoration: none;
+                    color: $primary-color;
+                }
+            }
+            .page-link-active{
+                font-weight: bold;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    // content middle
+    .content-middle{
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 10px ;
+        margin-bottom: 100px;
+    }
+    // modal
+    .modal-dialog{
+        @media (max-width: 768px) {
+            max-width: 100%;
+            height: 100vh;
+            margin: 0;
+        }
+        .modal-content{
+            @media (max-width: 768px){
+                border-radius: 0 !important;
+                min-height: 100vh;
+                border: none;
+            }
+        }
+    }
+
+
+    // preloader
+    .preloader{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: $white-color;
+        z-index: 99999;
+        
+        @include flex-box($align-items:center, $justify-content:center);
+        img{
+            width: 200px;
+            vertical-align: middle;
+        }
+    }
+    
+
+    // print
+    .print-show{
+        display: none !important;
+    }
+    @media print {
+        aside, header{
+            display: none !important;
+        }
+        .mainbar{
+            margin-left: 0;
+        }
+        a, h4, p, td, th{
+            color: $black-color !important;
+        }
+        .print-show{
+            display: block !important;
+        }
+        .print-none{
+            display: none !important;
+        }
+        .card{
+            border: none !important;
+        }
+        .table{
+            font-size: $regular-size;
+            td, th{
+                padding: 5px;
+            }
+        }
+        p{
+            font-size: $regular-size;
+        }
+    }
+}

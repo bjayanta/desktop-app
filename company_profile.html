@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Company Profile | MaxSOP</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./resources/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- master style -->
+    <link rel="stylesheet" href="./css/settings_pages.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- user profile style -->
+    <link rel="stylesheet" href="./css/pages/profile.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <!-- aside -->
+    <aside class="setting-pages-aside">
+        <h5>Company Profile</h5>
+        <ul class="list-group">
+            <li>
+                <a href="company_profile.html" class="list-group-item active list-group-item-action">Profile Details</a>
+            </li>
+            <li>
+                <a href="company_profile_edit.html" class="list-group-item list-group-item-action">Edit Details</a>
+            </li>
+        </ul>
+    </aside>
+    <!-- end aside -->
+
+
+    <!-- setting-pages-aside-layer -->
+    <div class="setting-pages-aside-layer"></div>
+    <!-- End setting-pages-aside-layer -->
+
+    <!-- setting pages main ber -->
+    <section class="setting-pages-mainber mb-5">
+
+
+        <!-- header -->
+        <header class=" py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <!-- Expand Button -->
+                    <div class="expand-button">
+                        <input type="checkbox" class="btn-check" id="aside-expand-button" autocomplete="off"
+                            onclick="asideExpand()">
+                        <label class="btn btn-outline-success p-1" for="aside-expand-button">
+                            <i class="bi bi-list-nested"></i>
+                        </label>
+                    </div>
+                    <a href="dashboard.html" class="btn-close ms-auto" aria-label="Close"></a>
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+        <div class="container mt-3 profile">
+            <div class="card border-0">
+                <div class="card-header mb-4 border py-3 rounded-0 d-flex align-items-center">
+                    <div class="profile-image square">
+                        <img src="resources/images/logos/logo_with_name.svg" alt="profile">
+                    </div>
+                    <a href="company_profile_edit.html" class="btn top-icon-button print-none ms-auto print-none"
+                        title="Edit information">
+                        <i class="bi bi-pencil-square"></i>
+                    </a>
+                    <a href="#" class="btn top-icon-button print-none" title="Print" onclick="window.print()">
+                        <i class="bi bi-printer"></i>
+                    </a>
+                </div>
+                <div class="card-body rounded-0 border">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="info-wrapper px-2">
+                                <div class="border-bottom my-2 pb-2 d-flex align-items-center">
+                                    <h5>MaxSOP</h5>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="row align-items-start">
+                                            <div class="col-1">
+                                                <i class="bi bi-telephone"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <span class="d-block">+880 1786 494650</span>
+                                                <span class="d-block">+880 1786 494650</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-start">
+                                            <div class="col-1">
+                                                <i class="bi bi-envelope"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <span class="d-block">info@maxsop.com</span>
+                                                <span class="d-block">info@maxsop.com</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-start">
+                                            <div class="col-1">
+                                                <i class="bi bi-geo-alt"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <span class="d-block">Thana, Upazilla, District, Division,
+                                                    Mymensingh</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <div class="border-bottom my-2 pb-2 d-flex align-items-center">
+                                <h5>Description</h5>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos vel, accusamus quam
+                                eligendi aspernatur similique ducimus obcaecati laboriosam maiores iste ex eaque debitis
+                                facilis, hic magnam neque? Quasi, incidunt doloremque!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Option 1: Bootstrap Bundle with Popper.js -->
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/settings_pages.js"></script>
+</body>
+
+</html>

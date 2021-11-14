@@ -1,0 +1,27 @@
+.media-upload .upload-button {
+  width: 100%;
+  height: 200px;
+  border: 1px dotted gray;
+  position: relative;
+  transition: all linear 0.3s;
+}
+.media-upload .upload-button:hover {
+  color: #2CA01C;
+}
+.media-upload .upload-button .form-control {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+.media-upload .upload-button i {
+  font-size: 52px;
+}
+.media-upload .btn i {
+  font-size: 20px;
+  line-height: 0;
+}
+
+/*# sourceMappingURL=media_upload.css.map */

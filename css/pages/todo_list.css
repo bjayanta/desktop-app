@@ -1,0 +1,35 @@
+.todo-wrapper {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+.todo-wrapper .todo-header h2 {
+  color: #2F4858;
+  margin-bottom: 20px;
+}
+.todo-wrapper .list-group {
+  border: none;
+  border-radius: 0;
+}
+.todo-wrapper .list-group .list-group-item {
+  margin-top: 20px;
+  border: 1px solid #D5D8DD;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.todo-wrapper .list-group .list-group-item input[type=checkbox] {
+  margin-top: 0;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+.todo-wrapper .list-group .list-group-item input[type=checkbox]:checked ~ span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/*# sourceMappingURL=todo_list.css.map */

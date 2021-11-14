@@ -1,0 +1,32 @@
+.accordion{
+    .accordion-item{
+        border: none;
+        .accordion-button{
+            border: none;
+            border-radius: 0;
+            padding: 10px 20px;
+            font-size: $regular-size;
+            transition: all linear .2s;
+            &:hover{
+                letter-spacing: 1px;
+                text-decoration: none;
+            }
+            &:after{
+                transform: rotate(90deg);
+            }
+            
+            &:focus{
+                border-bottom: none;
+            }
+            &.accordion-button:not(.collapsed){
+                font-weight: bold;
+                color: $black-color;
+                background-color: transparent;
+                box-shadow: none;
+                &:after{
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}

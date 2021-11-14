@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Employees | MaxSOP</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./resources/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- master style -->
+    <link rel="stylesheet" href="./css/settings_pages.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- user profile style -->
+    <link rel="stylesheet" href="./css/pages/employee_list.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <!-- aside -->
+    <aside class="setting-pages-aside">
+        <h5>Employee</h5>
+        <ul class="list-group">
+            <li>
+                <a href="employee_list.html" class="list-group-item active list-group-item-action">All employees</a>
+            </li>
+            <li>
+                <a href="#" class="list-group-item list-group-item-action">Front end</a>
+            </li>
+            <li>
+                <a href="#" class="list-group-item list-group-item-action">Back end</a>
+            </li>
+        </ul>
+    </aside>
+    <!-- end aside -->
+
+
+    <!-- setting-pages-aside-layer -->
+    <div class="setting-pages-aside-layer"></div>
+    <!-- End setting-pages-aside-layer -->
+
+    <!-- setting pages main ber -->
+    <section class="setting-pages-mainber mb-5">
+
+
+        <!-- header -->
+        <header class=" py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <!-- Expand Button -->
+                    <div class="expand-button">
+                        <input type="checkbox" class="btn-check" id="aside-expand-button" autocomplete="off"
+                            onclick="asideExpand()">
+                        <label class="btn btn-outline-success p-1" for="aside-expand-button">
+                            <i class="bi bi-list-nested"></i>
+                        </label>
+                    </div>
+                    <a href="dashboard.html" class="btn-close ms-auto" aria-label="Close"></a>
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+
+
+
+        <div class="container employee-list-wrap">
+
+
+            <!-- table -->
+            <div class="card border-0 mt-5">
+                <div class="card-header p-0 d-md-flex align-items-center border-0  d-block">
+                    <!-- page title -->
+                    <div class="mt-3 mb-2 me-auto">
+                        <h4 class="main-title">All employees</h4><br>
+                        <small class="print-none">About 563,000,000 results (0.98 seconds)</small>
+                    </div>
+                    <!-- search -->
+                    <a href="#search" class="btn top-icon-button print-none" title="Search" data-bs-toggle="collapse"
+                        role="button" aria-expanded="false">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <!-- refresh -->
+                    <a href="#" class="btn top-icon-button print-none" title=" Add employee " type="button"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <i class="bi bi-plus-circle"></i>
+                    </a>
+                </div>
+                <!-- content body -->
+                <div class="card-body p-0">
+                    <!-- search collapse -->
+                    <div class="collapse print-none" id="search">
+                        <div class="card card-body rounded-0 border-0 px-0">
+                            <!-- search form -->
+                            <form action="#">
+                                <div class="row gy-1 gx-3">
+                                    <!-- Name -->
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <label for="voucher" class="form-label">Name</label>
+                                        <input type="text" name="#" class="form-control" id="voucher"
+                                            placeholder="Name...">
+                                    </div>
+                                    <!-- button -->
+                                    <div class="col-12 col-sm-6 col-lg-2">
+                                        <label class="form-label">&nbsp;</label>
+                                        <button type="submit" class="btn btn-block w-100 custom-btn btn-success">Search
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
+
+                        <div class="col-md-4">
+                            <div class="employee shadow-sm">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://cutt.ly/dhKRJ0l" alt="">
+                                    <div class="ms-3">
+                                        <a href="user_profile.html" class="d-block">Baky Billah</a>
+                                        <small class="text-muted">017123456789</small>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="user_settings.html" class=" d-block "> Edit</a>
+                                        <a href="#" class=" d-block text-danger">Delete </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="employee shadow-sm">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://cutt.ly/dhKRJ0l" alt="">
+                                    <div class="ms-3">
+                                        <a href="user_profile.html" class="d-block">Baky Billah</a>
+                                        <small class="text-muted">017123456789</small>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="user_settings.html" class=" d-block "> Edit</a>
+                                        <a href="#" class=" d-block text-danger">Delete </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="employee shadow-sm">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://cutt.ly/dhKRJ0l" alt="">
+                                    <div class="ms-3">
+                                        <a href="user_profile.html" class="d-block">Baky Billah</a>
+                                        <small class="text-muted">017123456789</small>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="user_settings.html" class=" d-block "> Edit</a>
+                                        <a href="#" class=" d-block text-danger">Delete </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="employee shadow-sm">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://cutt.ly/dhKRJ0l" alt="">
+                                    <div class="ms-3">
+                                        <a href="user_profile.html" class="d-block">Baky Billah</a>
+                                        <small class="text-muted">017123456789</small>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="user_settings.html" class=" d-block "> Edit</a>
+                                        <a href="#" class=" d-block text-danger">Delete </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="employee shadow-sm">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://cutt.ly/dhKRJ0l" alt="">
+                                    <div class="ms-3">
+                                        <a href="user_profile.html" class="d-block">Baky Billah</a>
+                                        <small class="text-muted">017123456789</small>
+                                    </div>
+                                    <div class="ms-auto">
+                                        <a href="user_settings.html" class=" d-block "> Edit</a>
+                                        <a href="#" class=" d-block text-danger">Delete </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <form action="#">
+                            <div class="modal-content">
+                                <div class="modal-header py-2">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add employee</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row g-3">
+                                        <!-- First name input -->
+                                        <div class="col-6">
+                                            <label for="first-name" class="form-label required">First name</label>
+                                            <input type="text" name="first-name" class="form-control" id="first-name"
+                                                required>
+                                        </div>
+
+                                        <!-- Last name input -->
+                                        <div class="col-6">
+                                            <label for="last-name" class="form-label required">Last name</label>
+                                            <input type="text" name="last-name" class="form-control" id="last-name"
+                                                required>
+                                        </div>
+
+                                        <!-- Last name input -->
+                                        <div class="col-12">
+                                            <label for="user-id" class="form-label required">Email address(User
+                                                ID)</label>
+                                            <input type="text" name="user-id" class="form-control" id="user-id"
+                                                placeholder="access@example.com" required>
+                                        </div>
+
+                                        <!-- input group -->
+                                        <div class="col-12">
+                                            <label for="phone" class="form-label required">Phone number</label>
+                                            <div class="input-group">
+                                                <input type="text" name="#" class="form-control" value="+880"
+                                                    style="width: 15%;" readonly>
+                                                <input type="text" name="#" class="form-control" id="phone"
+                                                    placeholder="xxxx-xxxxxx" style="width: 70%;">
+                                            </div>
+                                        </div>
+
+                                        <!-- password input -->
+                                        <div class="col-12">
+                                            <label for="password" class="form-label required">Password</label>
+                                            <div class="input-group">
+                                                <input type="password" name="password" class="form-control"
+                                                    id="password" placeholder="**********" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer py-1">
+                                    <button type="button" class="btn custom-btn btn-danger"
+                                        data-bs-dismiss="modal">Dismiss</button>
+                                    <button type="submit" class="btn custom-btn btn-success">Add</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- modal End -->
+
+                <!-- pagination -->
+                <div class="card-footer print-none">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination pagination-sm m-0  justify-content-end">
+                            <li class="page-item disabled"><a class="page-link" href="#"><i
+                                        class="bi bi-chevron-left"></i></a></li>
+                            <li class="page-item"><a class="page-link page-link-active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End setting pages main ber -->
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/settings_pages.js"></script>
+</body>
+
+</html>

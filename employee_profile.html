@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title> Employee Profile | MaxSOP</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./resources/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- master style -->
+    <link rel="stylesheet" href="./css/settings_pages.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- user profile style -->
+    <link rel="stylesheet" href="./css/pages/profile.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+    <!-- aside -->
+    <aside class="setting-pages-aside">
+        <h5>My Account</h5>
+        <ul class="list-group">
+            <li>
+                <a href="employee_profile.html" class="list-group-item active list-group-item-action">Profile Details</a>
+            </li>
+            <li>
+                <a href="#" class="list-group-item list-group-item-action">Attendance</a>
+            </li>
+            <li>
+                <a href="edit_degignation.html" class="list-group-item list-group-item-action">Edit Degignation</a>
+            </li>
+        </ul>
+    </aside>
+    <!-- end aside -->
+
+
+    <!-- setting-pages-aside-layer -->
+    <div class="setting-pages-aside-layer"></div>
+    <!-- End setting-pages-aside-layer -->
+
+    <!-- setting pages main ber -->
+    <section class="setting-pages-mainber mb-5">
+
+
+        <!-- header -->
+        <header class=" py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <!-- Expand Button -->
+                    <div class="expand-button">
+                        <input type="checkbox" class="btn-check" id="aside-expand-button" autocomplete="off"
+                            onclick="asideExpand()">
+                        <label class="btn btn-outline-success p-1" for="aside-expand-button">
+                            <i class="bi bi-list-nested"></i>
+                        </label>
+                    </div>
+                    <a href="dashboard.html" class="btn-close ms-auto" aria-label="Close"></a>
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+        <div class="container mt-3 profile">
+            <div class="text-end mb-3 print-none">
+                <!-- Print -->
+                <a href="#" class="btn top-icon-button print-none ms-auto" title="Print" onclick="window.print()">
+                    <i class="bi bi-printer"></i>
+                </a>
+            </div>
+            <div class="card border-0">
+                <div class="card-header mb-4 border rounded-0 d-flex align-items-center">
+                    <div class="profile-image">
+                        <img src="https://cutt.ly/mhFRsxO" class="border" alt="profile">
+                    </div>
+                    <div class="ms-3">
+                        <h2>Musab Osman</h2>
+                        <p class="text-muted">Manager</p>
+                    </div>
+                </div>
+                <div class="card-body rounded-0 border">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="info-wrapper px-2">
+                                <div class="border-bottom my-2 pb-2 d-flex align-items-center">
+                                    <h5>Contact</h5>
+                                </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <div class="row align-items-start">
+                                            <div class="col-1">
+                                                <i class="bi bi-telephone"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <span class="d-block">+880 1786 494650</span>
+                                                <span class="d-block">+880 1786 494650</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-start">
+                                            <div class="col-1">
+                                                <i class="bi bi-envelope"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <span class="d-block">info@maxsop.com</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-start">
+                                            <div class="col-1">
+                                                <i class="bi bi-house-door"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <span class="d-block">Permanent address:</span>
+                                                <span class="d-block">Thana, Upazilla, District, Division,
+                                                    Mymensingh</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-start">
+                                            <div class="col-1">
+                                                <i class="bi bi-geo-alt"></i>
+                                            </div>
+                                            <div class="col-10">
+                                                <span class="d-block">Present address:</span>
+                                                <span class="d-block">Thana, Upazilla, District, Division,
+                                                    Mymensingh</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <h5 class="border-bottom my-2 pb-2">Personal</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Date of birth:</strong> <span>5 December,
+                                            2020</span></li>
+                                    <li class="list-group-item"><strong>Father's name:</strong> <span>Abcd</span></li>
+                                    <li class="list-group-item"><strong>Mother's name:</strong> <span>Abcd</span></li>
+                                    <li class="list-group-item"><strong>NID number:</strong> <span>123456789</span></li>
+                                </ul>
+                                <h5 class="border-bottom my-2 pb-2">Degignation</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item"><strong>Post:</strong> <span>Manager</span></li>
+                                    <li class="list-group-item"><strong>Basic salary:</strong> <span>20000</span></li>
+                                    <li class="list-group-item"><strong>Home allowance:</strong> <span>0.00</span></li>
+                                    <li class="list-group-item"><strong>Medical allowance:</strong> <span>0.00</span>
+                                    </li>
+                                    <li class="list-group-item"><strong>Transport allowance:</strong> <span>0.00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <div class="border-bottom my-2 pb-2 d-flex align-items-center">
+                                <h5>Description</h5>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos vel, accusamus quam
+                                eligendi aspernatur similique ducimus obcaecati laboriosam maiores iste ex eaque debitis
+                                facilis, hic magnam neque? Quasi, incidunt doloremque!</p>
+                            <div class="border-bottom my-2 pb-2 d-flex align-items-center">
+                                <h5>Work experience</h5>
+                            </div>
+                            <div class="work-experience">
+                                <div class="work-experience-item">
+                                    <div class=" d-flex align-items-center">
+                                        <h6>2020 - 2020</h6>
+                                    </div>
+                                    <p class="text-small">
+                                        <span> Web designer</span>
+                                        <span>(Company name)</span>
+                                    </p>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi et
+                                        magnam officiis assumenda, quod ipsam quasi, molestias adipisci quos deleniti
+                                        unde! Tenetur laborum exercitationem minus voluptatum maiores. Omnis, quam.
+                                    </p>
+                                </div>
+                                <div class="work-experience-item">
+                                    <div class=" d-flex align-items-center">
+                                        <h6>2020 - 2020</h6>
+                                    </div>
+                                    <p class="text-small">
+                                        <span> Web designer</span>
+                                        <span>(Company name)</span>
+                                    </p>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi et
+                                        magnam officiis assumenda, quod ipsam quasi, molestias adipisci quos deleniti
+                                        unde! Tenetur laborum exercitationem minus voluptatum maiores. Omnis, quam.
+                                    </p>
+                                </div>
+                                <div class="work-experience-item">
+                                    <div class=" d-flex align-items-center">
+                                        <h6>2020 - 2020</h6>
+                                    </div>
+                                    <p class="text-small">
+                                        <span> Web designer</span>
+                                        <span>(Company name)</span>
+                                    </p>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt eligendi et
+                                        magnam officiis assumenda, quod ipsam quasi, molestias adipisci quos deleniti
+                                        unde! Tenetur laborum exercitationem minus voluptatum maiores. Omnis, quam.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/settings_pages.js"></script>
+</body>
+
+</html>

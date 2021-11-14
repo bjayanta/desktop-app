@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Edit Degignation | MaxSOP</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./resources/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- master style -->
+    <link rel="stylesheet" href="./css/settings_pages.css">
+</head>
+
+<body>
+
+
+
+
+    <!-- aside -->
+    <aside class="setting-pages-aside">
+        <h5>My Account</h5>
+        <ul class="list-group">
+            <li>
+                <a href="employee_profile.html" class="list-group-item list-group-item-action">Profile Details</a>
+            </li>
+            <li>
+                <a href="#" class="list-group-item list-group-item-action">Attendance</a>
+            </li>
+            <li>
+                <a href="edit_degignation.html" class="list-group-item active list-group-item-action">Edit Degignation</a>
+            </li>
+        </ul>
+    </aside>
+    <!-- end aside -->
+
+
+    <!-- setting-pages-aside-layer -->
+    <div class="setting-pages-aside-layer"></div>
+    <!-- End setting-pages-aside-layer -->
+
+
+    <!-- setting pages main ber -->
+    <section class="setting-pages-mainber">
+
+        <!-- header -->
+        <header class=" py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <!-- Expand Button -->
+                    <div class="expand-button">
+                        <input type="checkbox" class="btn-check" id="aside-expand-button" autocomplete="off" onclick="asideExpand()">
+                        <label class="btn btn-outline-success p-1" for="aside-expand-button">
+                            <i class="bi bi-list-nested"></i>
+                        </label>
+                    </div>
+                    <a href="dashboard.html" class="btn-close ms-auto" aria-label="Close"></a>
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+        
+        <div class="content-middle mt-3">
+            <!-- alert -->
+            <div class="alert rounded-0 p-1 border-0 alert-danger" role="alert">
+                A simple danger alert—check it out!
+            </div>
+            <!-- End alert -->
+            <h5>Edit Degignation</h5>
+            <form action="#">
+                <div class="row g-2 mt-2">
+                    <!-- Post -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="post" class="form-label mt-1">Post</label>
+                            </div>
+                            <div class="col-md-9">
+                                <select name="#" class="form-select">
+                                    <option value="">Manager</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Basic Salary -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="basic-salary" class="form-label mt-1">Basic salary</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="basic-salary" value="20000">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="fixed-bottom bg-dark px-3 py-2 text-end">
+                    <button class="btn custom-btn btn-danger" type="reset">Reset</button>
+                    <button class="btn custom-btn btn-success" type="submit">Save change</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!-- End setting pages main ber -->
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/settings_pages.js"></script>
+</body>
+
+</html>

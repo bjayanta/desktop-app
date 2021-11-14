@@ -1,0 +1,107 @@
+// variables
+@import '../helpers/variables';
+
+
+.profile{
+    .card{
+        .card-header{
+            p{
+                letter-spacing: 3px;
+                position: relative;
+                &:after{
+                    position: absolute;
+                    content: '';
+                    width: 30%;
+                    height: 2px;
+                    background-color: $primary-color;
+                    left: 0;
+                    bottom: -5px;
+                }
+            }
+            .profile-image{
+                position: relative;
+                &:hover a{
+                    opacity: 1;
+                }
+                img{
+                    width: 150px;
+                    height: 150px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                &.square{
+                    img{
+                        width: auto;
+                        height: 58px;
+                        object-fit: cover;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+        .card-body{
+            .info-wrapper{
+                border-right: 1px solid $border-color;
+                .list-group{
+                    border-radius: 0;
+                    .list-group-item{
+                        border: none;
+                        background-color: transparent;
+                        padding: 5px 0;
+                        strong{
+                            font-size: 14px;
+                        }
+                        span{
+                            font-size: $regular-size;
+                        }
+                    }
+                }
+            }
+            .work-experience{
+                border-left: 2px solid $primary-color;
+                margin-left: 10px;
+                padding-left: 20px;
+                margin-top: 20px;
+                position: relative;
+                .work-experience-item{
+                    margin-top: 10px;
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50px;
+                        background-color: $white-color;
+                        border: 2px solid $primary-color;
+                        left: -6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media print {
+    .border{
+        border: none !important;
+    }
+    .user-profile{
+        margin-top: 0;
+    }
+    p{
+        font-size: $regular-size;
+    }
+    .card-header{
+        margin-bottom: 0 !important;
+        border-bottom: none !important;
+    }
+    .card-body{
+        padding: 0;
+    }
+    .col-md-4{
+        width: 33.3333333333%;
+    }
+    .col-md-8{
+        width:66.6666666667%;
+    }
+}

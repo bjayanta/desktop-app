@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Sign in | MaxSOP</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./resources/images/logos/icon-logo.svg" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <!-- auth style -->
+    <link rel="stylesheet" href="css/authentication.css">
+</head>
+
+<body>
+    <!-- authentication -->
+    <section class="authentication">
+
+        <!-- main wrapper -->
+        <div class="wrapper">
+            <!-- alert -->
+            <div class="alert alert-danger p-2 mb-0 border-0 rounded-0" role="alert">
+                A simple danger alert—check it out!
+            </div> 
+
+            <div class="wrap-content">
+                <div class="p-4 pt-2">
+                    <!-- Brand logo -->
+                    <div class="text-center">
+                        <img src="./resources/images/logos/logo_with_name.svg" class="logo" alt="Brand logo">
+                    </div>
+                    <hr>
+
+                    <!-- page title -->
+                    <div class="text-center mt-2 mb-3">
+                        <h3 class="main-title">Sign In</h3>
+                    </div>
+
+                    <!-- Sum text -->
+                    <p class="px-4 text-center mb-3">
+                        <small>
+                            One account for everything Intuit, including QuickBooks. 
+                            <a href="#" target="_blank">Learn more</a>
+                        </small>
+                    </p>
+
+                    <!-- form -->
+                    <form action="#">
+                        <div class="row g-3">
+                            <!-- user ID -->
+                            <div class="col-12">
+                                <label for="user" class="form-label required">User ID</label>
+                                <input type="text" name="user" class="form-control" id="user" placeholder="access@example.com" required>
+                            </div>
+
+                            <!-- password input -->
+                            <div class="col-12">
+                                <label for="password" class="form-label required">Password</label>
+                                <div class="input-group">
+                                    <input type="password" name="password" class="form-control" id="password"
+                                        placeholder="**********" required>
+                                    <a href="#" class="pass-eye" onclick="show()"><i class="bi bi-eye-fill"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- checkbox input -->
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input type="checkbox" name="remember" class="form-check-input" id="remember" value="">
+                                    <label class="form-check-label" for="remember">Remember me</label>
+                                </div>
+                            </div>
+
+
+                            <!-- button -->
+                            <div class="col-12">
+                                <button type="submit" class="btn w-100 btn-success custom-btn mr-2">
+                                    <i class="bi bi-lock"></i>
+                                    <span>Sign in</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+
+                    <!-- Sign in terms of use -->
+                    <div class="text-center text-small my-2">
+                        <small>
+                            By clicking sign in, you agree to our <br> 
+                            <a href="#" class="text-small">Terms</a> 
+                            and have read and acknowledge our 
+                            <a href="#" class="text-small">Global Privacy Statement.</a>
+
+                            <p class="fw-bold mt-2">Updated on December 3, 2020</p>
+                        </small>
+                    </div>
+                    <hr>
+
+                    <div class="mt-2 text-center">
+                        <!-- forgot password -->
+                        <small class="d-block"><a href="forgot_password.html" >I forgot my user ID or Password</a></small>
+
+                        <!-- Sign Up -->
+                        <small class="d-block">New to the system? <a href="signup.html">Sign up</a></small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row text-light text-small mt-2">
+                <div class="col-md-8">
+                    &copy; 2020 
+                    <a href="https://maxsop.com/" class="text-small" target="_blank">MaxSOP</a>. 
+                    <span> All rights reserved.</span>
+                </div>
+
+                <div class="col-md-4 text-end" style="word-spacing: 5px;">
+                    <a href="#" class="text-small" target="_blank">Privacy</a> | 
+                    <a href="#" class="text-small" target="_blank">Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function show() {
+            var input = document.getElementsByName("password")[0],
+                type = input.getAttribute("type");
+
+            if (type === "password") {
+                input.type = "text";
+                document.querySelector('.bi-eye-fill').classList.add("bi-eye-slash-fill");
+            } else {
+                input.type = "password";
+                document.querySelector('.bi-eye-fill').classList.remove("bi-eye-slash-fill");
+            }
+        }
+    </script>
+</body>
+
+</html>

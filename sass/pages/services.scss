@@ -1,0 +1,38 @@
+// Variable
+@import '../helpers/variables';
+
+.services-item{
+    margin-bottom: 50px;
+    .icon{
+        font-size: 32px;
+        margin-right: 10px;
+        line-height: 0;
+        color: $primary-color;
+        transition: all linear .2s;
+    }
+    p{
+        letter-spacing: 2px;
+        line-height: 25px;
+        &:first-child{
+            color: $primary-color;
+        }
+    }
+    &:hover .icon{
+        margin-top: 20px;
+    }
+}
+.portfolio{
+    .portfolio-item{
+        img{
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            transition: all linear .2s;
+            border:  2px solid transparent;
+            border-radius: 3px;
+            &:hover{
+                border-color: $primary-color;
+            }
+        }
+    }
+}

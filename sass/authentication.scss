@@ -1,0 +1,48 @@
+// variables
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+// Modules import
+@import 'modules/global';
+@import 'modules/form';
+
+// main style
+.authentication {
+    background-color: $secondary-color;
+    width: 100%;
+    min-height: 100vh;
+    @include flex-box($align-items: center,$flex-direction: column, $justify-content: center);
+
+    .wrapper {
+        width: 400px;
+        min-height: 500px;
+        
+        @media only screen and (max-width: 600px) {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .wrap-content {
+            background-color: $white-color;
+        }
+
+        .logo {
+            width: 256px;
+        }
+    }
+
+    // sig-up
+    .wrapper.signup {
+        width: 500px;
+        .custom-select{
+            border: 1px solid #D5D8DD;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    }
+
+    // forgot-password
+    .wrapper.forgot-password {
+        min-height: 300px
+    }
+}

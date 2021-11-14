@@ -1,0 +1,101 @@
+.profile .card .card-header p {
+  letter-spacing: 3px;
+  position: relative;
+}
+.profile .card .card-header p:after {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #2CA01C;
+  left: 0;
+  bottom: -5px;
+}
+.profile .card .card-header .profile-image {
+  position: relative;
+}
+.profile .card .card-header .profile-image:hover a {
+  opacity: 1;
+}
+.profile .card .card-header .profile-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profile .card .card-header .profile-image.square img {
+  width: auto;
+  height: 58px;
+  object-fit: cover;
+  border-radius: 0;
+}
+.profile .card .card-body .info-wrapper {
+  border-right: 1px solid #D5D8DD;
+}
+.profile .card .card-body .info-wrapper .list-group {
+  border-radius: 0;
+}
+.profile .card .card-body .info-wrapper .list-group .list-group-item {
+  border: none;
+  background-color: transparent;
+  padding: 5px 0;
+}
+.profile .card .card-body .info-wrapper .list-group .list-group-item strong {
+  font-size: 14px;
+}
+.profile .card .card-body .info-wrapper .list-group .list-group-item span {
+  font-size: 14px;
+}
+.profile .card .card-body .work-experience {
+  border-left: 2px solid #2CA01C;
+  margin-left: 10px;
+  padding-left: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+.profile .card .card-body .work-experience .work-experience-item {
+  margin-top: 10px;
+}
+.profile .card .card-body .work-experience .work-experience-item::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  border: 2px solid #2CA01C;
+  left: -6px;
+}
+
+@media print {
+  .border {
+    border: none !important;
+  }
+
+  .user-profile {
+    margin-top: 0;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .card-header {
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .col-md-4 {
+    width: 33.3333333333%;
+  }
+
+  .col-md-8 {
+    width: 66.6666666667%;
+  }
+}
+
+/*# sourceMappingURL=profile.css.map */

@@ -1,0 +1,46 @@
+// variables
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+
+// Start table style
+.table{
+    th,td{
+        white-space: nowrap;
+        font-size: $regular-size;
+    }
+}
+.custom-table{
+    font-size: $regular-size;
+    margin-bottom: 0;
+    tr{
+        td{
+            padding: 8px 10px;
+            border: 1px dotted $border-color;
+            border-right: none;
+        }
+    }
+}
+
+
+// table button
+.table-small-button{
+    padding: 0;
+    font-size: 20px;
+    line-height: 0;
+    color: $gray-color;
+    &:hover{
+        color: $primary-color;
+        text-decoration: none;
+    }
+}
+.table-small-button-danger{
+    padding: 0;
+    font-size: 20px;
+    line-height: 0;
+    color: $gray-color;
+    &:hover{
+        color: red;
+        text-decoration: none;
+    }
+}

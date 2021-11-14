@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>settings | MaxSOP</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./resources/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- master style -->
+    <link rel="stylesheet" href="./css/settings_pages.css">
+</head>
+
+<body>
+
+
+
+
+    <!-- aside -->
+    <aside class="setting-pages-aside">
+        <h5>Settings</h5>
+        <ul class="list-group">
+            <li>
+                <a href="user_profile.html"
+                    class="list-group-item active list-group-item-action">Profile Details</a>
+            </li>
+            <li>
+                <a href="attendance.html" class="list-group-item list-group-item-action">Attendance</a>
+            </li>
+            <li>
+                <a href="change_password.html" class="list-group-item list-group-item-action">Change Password</a>
+            </li>
+        </ul>
+    </aside>
+    <!-- end aside -->
+
+
+    <!-- setting-pages-aside-layer -->
+    <div class="setting-pages-aside-layer"></div>
+    <!-- End setting-pages-aside-layer -->
+
+
+    <!-- setting pages main ber -->
+    <section class="setting-pages-mainber">
+
+        <!-- header -->
+        <header class=" py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center">
+                    <!-- Expand Button -->
+                    <div class="expand-button">
+                        <input type="checkbox" class="btn-check" id="aside-expand-button" autocomplete="off" onclick="asideExpand()">
+                        <label class="btn btn-outline-success p-1" for="aside-expand-button">
+                            <i class="bi bi-list-nested"></i>
+                        </label>
+                    </div>
+                    <a href="dashboard.html" class="btn-close ms-auto" aria-label="Close"></a>
+                </div>
+            </div>
+        </header>
+        <!-- End header -->
+
+        
+        <div class="content-middle mt-3">
+            <!-- alert -->
+            <div class="alert rounded-0 p-1 border-0 alert-danger" role="alert">
+                A simple danger alert—check it out!
+            </div>
+            <!-- End alert -->
+            <h5>Edit your profile information</h5>
+            <p class="text-small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, et?</p>
+            <form action="#">
+                <div class="row g-2 mt-2">
+                    <h6 class="border-bottom mt-4 pb-2">Basic information</h6>
+                    <!-- First name -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="first-name" class="form-label mt-1 required">First name</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="first-name" value="Musab" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Last name -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="last-name" class="form-label mt-1 required">Last name</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="last-name" value="Osman" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Picture -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="profile-picture" class="form-label mt-1 required">Profile Picture</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="profile-picture" value="https://cutt.ly/mhFRsxO" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="date" class="form-label mt-1">Date of birth</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="date" value="5 December, 2020">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Father's name -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="father-name" class="form-label mt-1">Father's name</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="father-name" value="Abcd">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mother's name -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="mother-name" class="form-label mt-1">Mother's name</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="mother-name" value="Abcd">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NID Number -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="nid-number" class="form-label mt-1">NID number</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="nid-number" value="123456789">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="inline-textarea" class="form-label">Description</label>
+                            </div>
+                            <div class="col-md-9">
+                                <textarea name="textarea" class="form-control" id="inline-textarea" placeholder="Textarea"
+                                    rows="5"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos vel, accusamus quam eligendi aspernatur similique ducimus obcaecati laboriosam maiores iste ex eaque debitis facilis, hic magnam neque? Quasi, incidunt doloremque!</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h6 class="border-bottom mt-4 pb-2">Contact information</h6>
+                    <!-- Email -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="email" class="form-label mt-1">Email</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="email" name="#" class="form-control" id="email"
+                                    value="musabosman3104@gmail.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Person Number -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="prymary-number" class="form-label mt-1">Primary phone number</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="prymary-number" value="01701028220">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Person Number -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="number" class="form-label mt-1">Alternate phone number</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="number" value="01701028220">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Present Address -->
+                    <div class="col-12">
+                        <div class="row gy-2">
+                            <div class="col-md-3">
+                                <label for="present-address" class="form-label mt-1">Present address</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="present-address"
+                                    value="Mymensingh">
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="present-address"
+                                    value="Mymensingh">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Present Address Select -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-9">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <select name="#" class="form-select">
+                                            <option value="">Division</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select name="#" class="form-select">
+                                            <option value="">District</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select name="#" class="form-select">
+                                            <option value="">Upazilla</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select name="#" class="form-select">
+                                            <option value="">Thana</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Permanent Address -->
+                    <div class="col-12">
+                        <div class="row gy-2">
+                            <div class="col-md-3">
+                                <label for="permanent-address" class="form-label mt-1">Permanent address</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="permanent-address"
+                                    value="Mymensingh">
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="permanent-address"
+                                    value="Mymensingh">
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Permanent address Select -->
+                     <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-9">
+                                <div class="row g-2">
+                                    <div class="col-md-3">
+                                        <select name="#" class="form-select">
+                                            <option value="">Division</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select name="#" class="form-select">
+                                            <option value="">District</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select name="#" class="form-select">
+                                            <option value="">Upazilla</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select name="#" class="form-select">
+                                            <option value="">Thana</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h6 class="border-bottom mt-4 pb-2">Post/Degignation information</h6>
+
+                    <!-- Post -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="post" class="form-label mt-1">Post</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="post" value="Manager" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Basic Salary -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="basic-salary" class="form-label mt-1">Basic salary</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="basic-salary" value="20000" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Home allowance -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="home-allowance" class="form-label mt-1">Home allowance</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="home-allowance" value="0.00">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Medical Allowance -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="medical-allowance" class="form-label mt-1">Medical allowance</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="medical-allowance" value="0.00">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transport Allowance -->
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label for="transport-allowance" class="form-label mt-1">Transport allowance</label>
+                            </div>
+                            <div class="col-md-9">
+                                <input type="text" name="#" class="form-control" id="transport-allowance" value="0.00">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Button -->
+                <div class="fixed-bottom bg-dark px-3 py-2 text-end">
+                    <button class="btn custom-btn btn-danger" type="reset">Reset</button>
+                    <button class="btn custom-btn btn-success" type="submit">Save change</button>
+                </div>
+            </form>
+        </div>
+
+    </section>
+    <!-- End setting pages main ber -->
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/settings_pages.js"></script>
+</body>
+
+</html>

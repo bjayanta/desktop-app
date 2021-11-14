@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Purchase new entry | MaxSOP</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./resources/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- master style -->
+    <link rel="stylesheet" href="./css/master.css">
+    <!-- Main style -->
+    <link rel="stylesheet" href="./css/pages/purchase_entry.css">
+</head>
+
+<body>
+
+
+
+    <!-- sidebar -->
+    <aside class="page-aside">
+        <!-- accordion menu -->
+
+        <!-- aside brand -->
+        <div class="aside-brand">
+            <a href="dashboard.html">
+                <img src="./resources/images/logos/logo_with_name.svg" alt="">
+            </a>
+        </div>
+        <!-- End aside-brand -->
+
+        <ul class="accordion" id="asideAccordion">
+            <h6 class="ps-3 pb-1">Basic</h6>
+            <li class="accordion-item">
+                <a href="dashboard.html" class="sigle-nav-link">
+                    <i class="bi bi-house"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#purchase" aria-expanded="false" aria-controls="purchase">
+                    <i class="bi bi-bag"></i>
+                    <span>Purchase</span>
+                </a>
+
+                <ul id="purchase" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#asideAccordion">
+                    <li><a href="purchase_records.html" class="nav-link">All Records</a></li>
+                    <li><a href="purchase_entry.html" class="nav-link active">New Entry</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sale" aria-expanded="false" aria-controls="sale">
+                    <i class="bi bi-cart3"></i>
+                    <span>Sales</span>
+                </a>
+
+                <ul id="sale" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#asideAccordion">
+                    <li><a href="sale_records.html" class="nav-link">All Records</a></li>
+                    <li><a href="sale_entry.html" class="nav-link">New Entry</a></li>
+                </ul>
+            </li>
+            
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#parties" aria-expanded="false" aria-controls="parties">
+                    <i class="bi bi-people"></i>
+                    <span>Parties</span>
+                </a>
+
+                <ul id="parties" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="supplier.html" class="nav-link">Supplier</a></li>
+                    <li><a href="customer.html" class="nav-link">Customer</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#stock" aria-expanded="false" aria-controls="stock">
+                    <i class="bi bi-inboxes"></i>
+                    <span>Stock</span>
+                </a>
+
+                <ul id="stock" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="supplier.html" class="nav-link">Supplier</a></li>
+                    <li><a href="customer.html" class="nav-link">Customer</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#banking" aria-expanded="false" aria-controls="banking">
+                    <i class="bi bi-credit-card"></i>
+                    <span>Banking</span>
+                </a>
+
+                <ul id="banking" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="bank_transaction.html" class="nav-link">All Transaction</a></li>
+                    <li><a href="bank_entry.html" class="nav-link">New Entry</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#components" aria-expanded="false" aria-controls="components">
+                    <i class="bi bi-code-slash"></i>
+                    <span>Components</span>
+                </a>
+
+                <ul id="components" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="table.html" class="nav-link">Table</a></li>
+                    <li><a href="form.html" class="nav-link">Form</a></li>
+                    <li><a href="icon.html" class="nav-link">Icon</a></li>
+                    <li><a href="button.html" class="nav-link">Button</a></li>
+                    <li><a href="accordion.html" class="nav-link">Accordion</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#media" aria-expanded="false" aria-controls="media">
+                    <i class="bi bi-film"></i>
+                    <span>Media</span>
+                </a>
+
+                <ul id="media" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="media_upload.html" class="nav-link">Upload</a></li>
+                    <li><a href="media_gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="media_album.html" class="nav-link">Album</a></li>
+                </ul>
+            </li>
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                    <i class="bi bi-file-earmark-break"></i>
+                    <span>Pages</span>
+                </a>
+
+                <ul id="pages" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="voucher.html" class="nav-link">Voucher</a></li>
+                    <li><a href="invoice.html" class="nav-link">Invoice</a></li>
+                    <li><a href="gate_pass.html" class="nav-link">Gate Pass </a></li>
+                    <li><a href="coming_soon_basic.html" class="nav-link">Basic Coming Soon</a></li>
+                    <li><a href="countdown_coming_soon.html" class="nav-link">Countdown Coming Soon</a></li>
+                    <li><a href="screen_lock.html" class="nav-link">Screen Lock</a></li>
+                    <li><a href="preloader.html" class="nav-link">Preloader</a></li>
+                    <li><a href="empty_page.html" class="nav-link">Empty Page </a></li>
+                    <li><a href="under_construction.html" class="nav-link">Under Construction</a></li>
+                    <li><a href="404.html" class="nav-link">404 Erorr</a></li>
+                    <li><a href="500.html" class="nav-link">500 Erorr</a></li>
+                    <li><a href="503.html" class="nav-link">503 Erorr</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <!-- End sidebar -->
+
+
+
+
+    <!-- page-aside-layer -->
+    <div class="page-aside-layer"></div>
+
+
+
+
+
+    <section class="mainbar">
+
+
+        <!-- header -->
+        <header>
+            <nav class="navbar page-navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Aside expand button -->
+                    <div class="expand-button">
+                        <button class="btn btn-success p-1" onclick="asideExpand()">
+                            <i class="bi bi-list-nested"></i>
+                        </button>
+                    </div>
+                    <!-- End aside expand button -->
+
+                    <!-- dark button -->
+                    <button class="btn cuttom-btn btn-light btn-sm p-0 dark-button ms-auto"><i class="bi bi-moon"></i></button>
+                    <!-- End dark button -->
+
+                    <!-- Responsive button -->
+                    <button class="navbar-toggler p-1 ms-auto" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <!-- End responsive button -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav my-2 text-end ms-auto mb-lg-0 py-3 py-lg-0">
+                            <!-- Help -->
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">
+                                    <span class=" me-3 me-lg-1">Help</span>
+                                    <i class="bi bi-info-circle"></i>
+                                </a>
+                            </li>
+                            <!-- Search -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" id="search-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Search</span>
+                                    <i class="bi bi-search"></i>
+                                </a>
+                                <div class="dropdown-menu search-dropdown p-2"  aria-labelledby="search-dropdown">
+                                    <form action="#">
+                                        <input type="text" class="form-control" placeholder="Search ....">
+                                        <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                                    </form>
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <i class="bi bi-search"></i>
+                                            <span>Dapibus ac facilisis in</span>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <i class="bi bi-search"></i>
+                                            <span>Dapibus ac facilisis in</span>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <i class="bi bi-search"></i>
+                                            <span>Dapibus ac facilisis in</span>
+                                        </a>
+                                      </div>
+                                </div>
+                            </li>
+                            <!-- Notification -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="notification-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Notification</span>
+                                    <i class="bi bi-bell"></i>
+                                </a>
+                                <ul class="dropdown-menu notification-dropdown py-2" aria-labelledby="notification-dropdown">
+                                    <h5 class="ms-3 mb-1">Notification</h5>
+                                    <hr>
+                                    <li><a class="dropdown-item " href="#">Dapibus ac facilisis in</a></li>
+                                    <li><a class="dropdown-item " href="#">Morbi leo risus</a></li>
+                                    <li><a class="dropdown-item " href="#">Porta ac consectetur ac</a></li>
+                                    <li><a class="dropdown-item " href="#">Vestibulum at eros</a></li>
+                                    <hr>
+                                    <div class="text-center mt-1">
+                                        <a href="#">See all</a>
+                                    </div>
+                                    
+                                </ul>
+                            </li>
+                            <!-- Settings -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="#"  id="settings-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Settings</span>
+                                    <i class="bi bi-gear"></i>
+                                </a>
+
+                                <div class="dropdown-menu settings-dropdown"  aria-labelledby="settings-dropdown">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Company </strong></li>
+                                                <li class="list-group-item"><a href="about_us.html" class="list-group-item-action">About Us</a></li>
+                                                <li class="list-group-item"><a href="services.html" class="list-group-item-action">Services</a></li>
+                                                <li class="list-group-item"><a href="terms.html" class="list-group-item-action">Terms & Conditions</a></li>
+                                                <li class="list-group-item"><a href="asked_question.html" class="list-group-item-action">FAQs</a></li>
+                                                <li class="list-group-item"><a href="license.html" class="list-group-item-action">License</a></li>
+                                                <li class="list-group-item"><a href="copyright.html" class="list-group-item-action">Copyright</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Cras justo odio</strong></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Cras justo odio</strong></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Cras justo odio</strong></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="user-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Profile</span>
+                                    <i class="bi bi-person"></i>
+                                </a>
+                                <ul class="dropdown-menu"  aria-labelledby="user-dropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="user_profile.html">
+                                            <div class="d-flex align-items-center my-2">
+                                                <img src="./resources/images/user/user.jpg" class="user-icon" alt="">
+                                                <div class="ms-2">
+                                                    <h6>Musab Osman</h6>
+                                                    <div class="text-small">
+                                                        musabosman3104@gmail.com
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <hr>
+                                    <li><a class="dropdown-item" href="user_settings.html">Settings</a></li>
+                                    <li><a class="dropdown-item" href="attendance.html">Attendance</a></li>
+                                    <li><a class="dropdown-item" href="change_password.html">Change Password</a></li>
+                                    <li><a class="dropdown-item" href="profile_gallery.html">Gallery</a></li>
+                                    <hr>
+                                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End header -->
+
+
+
+        <div class="container print-none">
+            <ul class="nav nav-tabs mt-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="purchase_records.html">All Records</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="purchase_entry.html">New Entry</a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="purchase-new-entry">
+            <div class="container">
+                <div class="card mb-5 border-0">
+                    <div class="card-header p-0 border-0 d-flex">
+                        <!-- page title -->
+                        <div class="mt-3">
+                            <h4 class="main-title">New Purchase</h4>
+                            <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, et.</small></p>
+                        </div>
+                        <!-- header icon -->
+                        <a href="purchase_records.html" title="Go back"
+                            class="pe-0 ms-auto print-none top-icon-button mb-2 mt-3">
+                            <i class="bi bi-arrow-left"></i>
+                        </a>
+                    </div>
+                    <div class="card-body p-0 pt-3">
+                        <form action="#">
+                            <div class="row gx-3 gy-2">
+                                <div class="col-12 col-sm-6 col-md-2">
+                                    <label for="date" class="form-label required">Date</label>
+                                    <input type="date" class="form-control" name="date" id="date" required>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-2">
+                                    <label for="voucher-no" class="form-label required">Voucher No</label>
+                                    <input type="text" class="form-control" name="voucher_no" id="voucher-no"
+                                        placeholder="Enter Voucher No" required>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <label for="supplier" class="form-label required">Supplier</label>
+                                    <select class="form-select" name="supplier" id="supplier"
+                                        aria-label="Default select example" required>
+                                        <option value="">select</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3">
+                                    <label for="product" class="form-label required">Product</label>
+                                    <select class="form-select" name="product" id="product"
+                                        aria-label="Default select example" required>
+                                        <option value="">select</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-2 text-end">
+                                    <label class="form-label">&nbsp;</label>
+                                    <button type="button" class="btn btn-block w-100 custom-btn btn-success"
+                                        data-bs-toggle="modal" data-bs-target="#set-quantity">Set Quantity</button>
+                                </div>
+                                <div class="col-12 p-2">
+                                    <div class="table-responsive">
+                                        <table class="table custom-table table-hover text-end">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 5%;" class="text-start">SL</th>
+                                                    <th scope="col" class="text-start">Details</th>
+                                                    <th scope="col">Quantity</th>
+                                                    <th scope="col">Purchase price</th>
+                                                    <th scope="col">Line total</th>
+                                                    <th scope="col" class="print-none ">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="text-start">01.</th>
+                                                    <td class="text-start">Pran Rice</td>
+                                                    <td>12 Box</td>
+                                                    <td>50.00</td>
+                                                    <td>6000.00</td>
+                                                    <td class="print-none ">
+                                                        <!-- Icons -->
+                                                        <a href="#" title="Edit" class="table-small-button ms-2" data-bs-toggle="modal" data-bs-target="#set-quantity">
+                                                            <i class="bi bi-pencil-square"></i>
+                                                        </a>
+                                                        <a href="#" title="Delete"
+                                                            class="table-small-button ms-2 table-small-button-danger">
+                                                            <i class="bi bi-x-square"></i>
+                                                        </a>
+                                                        <!-- End Icons -->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-start">02.</th>
+                                                    <td class="text-start">Pran Rice</td>
+                                                    <td>12 Box</td>
+                                                    <td>50.00</td>
+                                                    <td>6000.00</td>
+                                                    <td class="print-none ">
+                                                        <!-- Icons -->
+                                                        <a href="#" title="Edit" class="table-small-button ms-2" data-bs-toggle="modal" data-bs-target="#set-quantity">
+                                                            <i class="bi bi-pencil-square"></i>
+                                                        </a>
+                                                        <a href="#" title="Delete"
+                                                            class="table-small-button ms-2 table-small-button-danger">
+                                                            <i class="bi bi-x-square"></i>
+                                                        </a>
+                                                        <!-- End Icons -->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="text-start">03.</th>
+                                                    <td class="text-start">Pran Rice</td>
+                                                    <td>12 Box</td>
+                                                    <td>50.00</td>
+                                                    <td>6000.00</td>
+                                                    <td class="print-none ">
+                                                        <!-- Icons -->
+                                                        <a href="#" title="Edit" class="table-small-button ms-2" data-bs-toggle="modal" data-bs-target="#set-quantity">
+                                                            <i class="bi bi-pencil-square"></i>
+                                                        </a>
+                                                        <a href="#" title="Delete"
+                                                            class="table-small-button ms-2 table-small-button-danger">
+                                                            <i class="bi bi-x-square"></i>
+                                                        </a>
+                                                        <!-- End Icons -->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="4">Subtotal</th>
+                                                    <th>6000.00</th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="4">Others cost</th>
+                                                    <th style="width: 15%;"> <input type="text"
+                                                            class="form-control text-end" placeholder="0.00"> </th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="4">Supplier's balance</th>
+                                                    <th class="text-danger">-50000.00</th>
+                                                    <th>Payable</th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="4">Grand total</th>
+                                                    <th class="text-danger">-50000.00</th>
+                                                    <th>Payable</th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="3"></th>
+                                                    <th>Make payment</th>
+                                                    <th colspan="2"><button class="btn custom-btn btn-success btn-sm"
+                                                            type="button" data-bs-toggle="modal" data-bs-target="#payment-method">Select
+                                                            Mathod</button></th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="4">Supplier's current balance</th>
+                                                    <th class="text-danger">-50000.00</th>
+                                                    <th>Payable</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 mt-0">
+                                    <label for="note" class="form-label">  Note  </label>
+                                    <textarea name="note" id="note" class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="col-md-12 text-end mt-3">
+                                    <button type="reset" class="btn btn-danger custom-btn">Clear Cart</button>
+                                    <button type="submit" class="btn btn-success custom-btn">Purchase</button>
+                                </div>
+                            </div>
+                        </form>
+
+
+
+
+                        <!-- quantity Modal -->
+
+
+
+                        <div class="modal fade" id="set-quantity" tabindex="-1" aria-labelledby="setQuantityLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <form action="#">
+
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="setQuantityLabel">Select Quantity</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row g-3">
+                                                <div class="col-12">
+                                                    <div class="warehouse-wrapper">
+                                                        <div class="row gy-2">
+                                                            <div class="col-12 col-md-6 col-lg-4">
+                                                                <p class="mb-0">গাঙ্গিনাপার গুদাম</p>
+                                                                <span class="text-muted text-small"> stock: 8 Box
+                                                                    5.00</span>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" name="box">
+                                                                    <span class="input-group-text">Box</span>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" name="pcs">
+                                                                    <span class="input-group-text">PCS</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-md-6 col-lg-4">
+                                                                <p class="mb-0">গাঙ্গিনাপার গুদাম</p>
+                                                                <span class="text-muted text-small"> stock: 8 Box
+                                                                    5.00</span>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" name="box">
+                                                                    <span class="input-group-text">Box</span>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" name="pcs">
+                                                                    <span class="input-group-text">PCS</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-md-6 col-lg-4">
+                                                                <p class="mb-0">গাঙ্গিনাপার গুদাম</p>
+                                                                <span class="text-muted text-small"> stock: 8 Box
+                                                                    5.00</span>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" name="box">
+                                                                    <span class="input-group-text">Box</span>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" name="pcs">
+                                                                    <span class="input-group-text">PCS</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 col-md-6 col-lg-4">
+                                                                <p class="mb-0">গাঙ্গিনাপার গুদাম</p>
+                                                                <span class="text-muted text-small"> stock: 8 Box
+                                                                    5.00</span>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" name="box">
+                                                                    <span class="input-group-text">Box</span>
+                                                                </div>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" name="pcs">
+                                                                    <span class="input-group-text">PCS</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-6 col-lg-4">
+                                                            <label for="purchase-price" class="form-label">Purchase
+                                                                Price</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control"
+                                                                    name="voucher_no" id="purchase-price"
+                                                                    placeholder="Enter Purchase Price">
+                                                                <span class="input-group-text">BDT</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 col-lg-4">
+                                                            <label for="retail-price" class="form-label">Retail
+                                                                Price</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control"
+                                                                    name="retail_price" id="retail-price"
+                                                                    placeholder="Enter Retail Price">
+                                                                <span class="input-group-text">BDT</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 col-lg-4">
+                                                            <label for="wholesale-price" class="form-label">Wholesale
+                                                                Price</label>
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control"
+                                                                    name="wholesale_price" id="wholesale-price"
+                                                                    placeholder="Enter Wholesale Price">
+                                                                <span class="input-group-text">BDT</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Erorr Massage -->
+                                                <!-- <span class="text-danger"><small>Error: Quantity can't be empty</small></span> -->
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn custom-btn btn-danger"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn custom-btn btn-success">Add to
+                                                cart</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End quantity Modal -->
+
+                        <!-- Payment Method Modal -->
+                        <div class="modal fade" id="payment-method" tabindex="-1" aria-labelledby="paymentMethodLabel"
+                        aria-hidden="true">
+                            <div class="modal-dialog">
+                                <form action="#">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="paymentMethodLabel">Select Payment Method
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row g-2">
+                                                <div class="col-12">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio"
+                                                            onclick="if(this.checked){paymentMethodCash()}"
+                                                            name="transfer-from" id="transfar-from-cash" value="cash"
+                                                            checked>
+                                                        <label class="form-check-label" for="transfar-from-cash">Cash
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input " type="radio"
+                                                            onclick="if(this.checked){paymentMethodBank()}"
+                                                            name="transfer-from" id="transfar-from-bank" value="bank">
+                                                        <label class="form-check-label" for="transfar-from-bank">
+                                                            Bank</label>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-12 cash-inactive input-active">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <label for="transfar-from-cash-select"
+                                                                class="form-label required">Cash</label>
+                                                            <select class="form-select d-block"
+                                                                name="transfar_from_cash" id="transfar-from-cash-select"
+                                                                required>
+                                                                <option value="">select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="bg-dark text-light p-2 mt-3">Current Balance BDT
+                                                                4000.00</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12 bank-inactive">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="transfar-from-bank-select"
+                                                                class="form-label required">bank</label>
+                                                            <select class="form-select d-block" name="bank"
+                                                                id="transfar-from-bank-select" required>
+                                                                <option value="">select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="account" class="form-label required">Account
+                                                                no.</label>
+                                                            <select class="form-select d-block" name="account"
+                                                                id="account" required>
+                                                                <option value="">select</option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="cheque" class="form-label">Cheque
+                                                                no.</label>
+                                                            <input type="text" name="cheque" class="form-control "
+                                                                id="cheque">
+                                                        </div>
+                                                        <div class="col-12 col-md-6">
+                                                            <label for="issue-date" class="form-label">Issue
+                                                                Date</label>
+                                                            <input type="date" name="issue_date" class="form-control "
+                                                                id="issue-date">
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="bg-dark text-light p-2 mt-3">Current Balance
+                                                                BDT 4000.00</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="amount" class="form-label required">Amount</label>
+                                                    <input type="text" name="amount" class="form-control " id="amount"
+                                                        placeholder="Enter Payment Amount" required>
+                                                    <small class="text-muted">* Amount must be less than or
+                                                        equal current balance (4000.00)</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn custom-btn btn-danger"
+                                            data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn custom-btn btn-success">Save</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Payment Method Modal -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function paymentMethodCash() {
+            document.querySelector(".cash-inactive").classList.add("input-active")
+            document.querySelector(".bank-inactive").classList.remove("input-active")
+        }
+        function paymentMethodBank() {
+            document.querySelector(".bank-inactive").classList.add("input-active")
+            document.querySelector(".cash-inactive").classList.remove("input-active")
+        }
+    </script>
+</body>
+
+</html>

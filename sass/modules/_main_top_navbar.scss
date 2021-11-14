@@ -1,0 +1,155 @@
+// variables
+@import '../helpers/variables';
+
+// main style
+.expand-button{
+    position: relative;
+    button{
+        font-size: 22px;
+        line-height: 0;
+    }
+    input[type="checkbox"]{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+
+.page-navbar{
+    position: relative;
+    .options-dropdown{
+        .button{
+            a{
+                color: $black-color ;
+                &:hover{
+                    text-decoration: none;
+                    color: $gray-color ;
+                }
+            }
+        }
+        .dropdown-menu{
+            right: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 0;
+            transition: ease .2s;
+            padding:  10px 0 30px 0;
+            border: none;
+            box-shadow: 0px 0px 30px rgb(51 51 51 / 5%);
+        }
+    }
+    
+    .dark-button{
+        margin-left: 10px !important;
+        i{
+            font-size: 25px;
+            line-height: 0;
+        }
+    }
+    padding-bottom: 0;
+    .navbar-nav{
+        background-color: $background-color;
+        
+        .nav-item{
+            .nav-link{
+                padding: 5px 15px;
+                border-bottom: 2px solid transparent;
+                min-width: 30px;
+                &:hover{
+                    border-color: $primary-color;
+                    text-decoration: none;
+                    color: $primary-color;
+                }
+                &:focus{
+                    border-color: $primary-color;
+                }
+                i{
+                    font-size: 20px;
+                    line-height: 0;
+                }
+            }
+        }
+        .dropdown{
+            .dropdown-menu{
+                right: 0 ;
+                left: auto;
+                box-shadow: 0px 0px 30px rgba(51, 51, 51, 0.301);
+                padding: 0;
+                .dropdown-item{
+                    padding: 7px 20px;
+                    .user-icon{
+                        width: 40px;
+                        border-radius: 50px;
+                    }
+                    &:hover{
+                        color: $primary-color;
+                        text-decoration: none;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+        .notification-dropdown{
+            min-width: 300px;
+        }
+        .search-dropdown{
+            width: 500px !important;
+            right: 160px ;
+            left: auto;
+            box-shadow: 0px 0px 30px rgba(51, 51, 51, 0.301);
+            @media (max-width: 992px){
+                position: absolute;
+                width: 100% !important;
+                top: 0 ;
+                right: 0;
+                left: 0;
+            }
+            .form-control{
+                border-radius: 50px;
+            }
+            .btn{
+                position: absolute;
+                top: 6px;
+                right: 10px;
+            }
+            .list-group{
+                border-radius: 0;
+                .list-group-item{
+                    border: none;
+                    i{
+                        font-size: 18px;
+                        color: $primary-color;
+                        line-height: 0;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .settings-dropdown{
+            width: 750px;
+            padding: 20px !important;
+            @media (max-width: 992px){
+                width: 100%;
+            }
+            .list-group{
+                width: 100%;
+                .list-group-item{
+                    border: none;
+                    padding: 0;
+                    strong{
+                        margin-left: 10px;
+                    }
+                    .list-group-item-action{
+                        margin: 0;
+                        padding: 5px 10px;
+                        display: block;
+                        &:hover{
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

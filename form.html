@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Form | MaxSOP</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./resources/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- master style -->
+    <link rel="stylesheet" href="./css/master.css">
+</head>
+
+<body>
+
+
+
+    <!-- sidebar -->
+    <aside class="page-aside">
+        <!-- accordion menu -->
+
+        <!-- aside brand -->
+        <div class="aside-brand">
+            <a href="dashboard.html">
+                <img src="./resources/images/logos/logo_with_name.svg" alt="">
+            </a>
+        </div>
+        <!-- End aside-brand -->
+
+        <ul class="accordion" id="asideAccordion">
+            <h6 class="ps-3 pb-1">Basic</h6>
+            <li class="accordion-item">
+                <a href="dashboard.html" class="sigle-nav-link">
+                    <i class="bi bi-house"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#purchase" aria-expanded="false" aria-controls="purchase">
+                    <i class="bi bi-bag"></i>
+                    <span>Purchase</span>
+                </a>
+
+                <ul id="purchase" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#asideAccordion">
+                    <li><a href="purchase_records.html" class="nav-link">All Records</a></li>
+                    <li><a href="purchase_entry.html" class="nav-link">New Entry</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sale" aria-expanded="false" aria-controls="sale">
+                    <i class="bi bi-cart3"></i>
+                    <span>Sales</span>
+                </a>
+
+                <ul id="sale" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#asideAccordion">
+                    <li><a href="sale_records.html" class="nav-link">All Records</a></li>
+                    <li><a href="sale_entry.html" class="nav-link">New Entry</a></li>
+                </ul>
+            </li>
+            
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#parties" aria-expanded="false" aria-controls="parties">
+                    <i class="bi bi-people"></i>
+                    <span>Parties</span>
+                </a>
+
+                <ul id="parties" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="supplier.html" class="nav-link">Supplier</a></li>
+                    <li><a href="customer.html" class="nav-link">Customer</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#stock" aria-expanded="false" aria-controls="stock">
+                    <i class="bi bi-inboxes"></i>
+                    <span>Stock</span>
+                </a>
+
+                <ul id="stock" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="supplier.html" class="nav-link">Supplier</a></li>
+                    <li><a href="customer.html" class="nav-link">Customer</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#banking" aria-expanded="false" aria-controls="banking">
+                    <i class="bi bi-credit-card"></i>
+                    <span>Banking</span>
+                </a>
+
+                <ul id="banking" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="bank_transaction.html" class="nav-link">All Transaction</a></li>
+                    <li><a href="bank_entry.html" class="nav-link">New Entry</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#components" aria-expanded="false" aria-controls="components">
+                    <i class="bi bi-code-slash"></i>
+                    <span>Components</span>
+                </a>
+
+                <ul id="components" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="table.html" class="nav-link">Table</a></li>
+                    <li><a href="form.html" class="nav-link active">Form</a></li>
+                    <li><a href="icon.html" class="nav-link">Icon</a></li>
+                    <li><a href="button.html" class="nav-link">Button</a></li>
+                    <li><a href="accordion.html" class="nav-link">Accordion</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#media" aria-expanded="false" aria-controls="media">
+                    <i class="bi bi-film"></i>
+                    <span>Media</span>
+                </a>
+
+                <ul id="media" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="media_upload.html" class="nav-link">Upload</a></li>
+                    <li><a href="media_gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="media_album.html" class="nav-link">Album</a></li>
+                </ul>
+            </li>
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages" aria-expanded="false" aria-controls="pages">
+                    <i class="bi bi-file-earmark-break"></i>
+                    <span>Pages</span>
+                </a>
+
+                <ul id="pages" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#asideAccordion">
+                    <li><a href="voucher.html" class="nav-link">Voucher</a></li>
+                    <li><a href="invoice.html" class="nav-link">Invoice</a></li>
+                    <li><a href="gate_pass.html" class="nav-link">Gate Pass </a></li>
+                    <li><a href="coming_soon_basic.html" class="nav-link">Basic Coming Soon</a></li>
+                    <li><a href="countdown_coming_soon.html" class="nav-link">Countdown Coming Soon</a></li>
+                    <li><a href="screen_lock.html" class="nav-link">Screen Lock</a></li>
+                    <li><a href="preloader.html" class="nav-link">Preloader</a></li>
+                    <li><a href="empty_page.html" class="nav-link">Empty Page </a></li>
+                    <li><a href="under_construction.html" class="nav-link">Under Construction</a></li>
+                    <li><a href="404.html" class="nav-link">404 Erorr</a></li>
+                    <li><a href="500.html" class="nav-link">500 Erorr</a></li>
+                    <li><a href="503.html" class="nav-link">503 Erorr</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <!-- End sidebar -->
+
+
+
+
+    <!-- page-aside-layer -->
+    <div class="page-aside-layer"></div>
+
+
+
+
+
+    <section class="mainbar">
+
+
+        <!-- header -->
+        <header>
+            <nav class="navbar page-navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Aside expand button -->
+                    <div class="expand-button">
+                        <button class="btn btn-success p-1" onclick="asideExpand()">
+                            <i class="bi bi-list-nested"></i>
+                        </button>
+                    </div>
+                    <!-- End aside expand button -->
+
+                    <!-- dark button -->
+                    <button class="btn cuttom-btn btn-light btn-sm p-0 dark-button ms-auto"><i class="bi bi-moon"></i></button>
+                    <!-- End dark button -->
+
+                    <!-- Responsive button -->
+                    <button class="navbar-toggler p-1 ms-auto" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <!-- End responsive button -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav my-2 text-end ms-auto mb-lg-0 py-3 py-lg-0">
+                            <!-- Help -->
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">
+                                    <span class=" me-3 me-lg-1">Help</span>
+                                    <i class="bi bi-info-circle"></i>
+                                </a>
+                            </li>
+                            <!-- Search -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" id="search-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Search</span>
+                                    <i class="bi bi-search"></i>
+                                </a>
+                                <div class="dropdown-menu search-dropdown p-2"  aria-labelledby="search-dropdown">
+                                    <form action="#">
+                                        <input type="text" class="form-control" placeholder="Search ....">
+                                        <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                                    </form>
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <i class="bi bi-search"></i>
+                                            <span>Dapibus ac facilisis in</span>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <i class="bi bi-search"></i>
+                                            <span>Dapibus ac facilisis in</span>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <i class="bi bi-search"></i>
+                                            <span>Dapibus ac facilisis in</span>
+                                        </a>
+                                      </div>
+                                </div>
+                            </li>
+                            <!-- Notification -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="notification-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Notification</span>
+                                    <i class="bi bi-bell"></i>
+                                </a>
+                                <ul class="dropdown-menu notification-dropdown py-2" aria-labelledby="notification-dropdown">
+                                    <h5 class="ms-3 mb-1">Notification</h5>
+                                    <hr>
+                                    <li><a class="dropdown-item " href="#">Dapibus ac facilisis in</a></li>
+                                    <li><a class="dropdown-item " href="#">Morbi leo risus</a></li>
+                                    <li><a class="dropdown-item " href="#">Porta ac consectetur ac</a></li>
+                                    <li><a class="dropdown-item " href="#">Vestibulum at eros</a></li>
+                                    <hr>
+                                    <div class="text-center mt-1">
+                                        <a href="#">See all</a>
+                                    </div>
+                                    
+                                </ul>
+                            </li>
+                            <!-- Settings -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="#"  id="settings-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Settings</span>
+                                    <i class="bi bi-gear"></i>
+                                </a>
+
+                                <div class="dropdown-menu settings-dropdown"  aria-labelledby="settings-dropdown">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Company </strong></li>
+                                                <li class="list-group-item"><a href="about_us.html" class="list-group-item-action">About Us</a></li>
+                                                <li class="list-group-item"><a href="services.html" class="list-group-item-action">Services</a></li>
+                                                <li class="list-group-item"><a href="terms.html" class="list-group-item-action">Terms & Conditions</a></li>
+                                                <li class="list-group-item"><a href="asked_question.html" class="list-group-item-action">FAQs</a></li>
+                                                <li class="list-group-item"><a href="license.html" class="list-group-item-action">License</a></li>
+                                                <li class="list-group-item"><a href="copyright.html" class="list-group-item-action">Copyright</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Cras justo odio</strong></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Cras justo odio</strong></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Cras justo odio</strong></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="user-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Profile</span>
+                                    <i class="bi bi-person"></i>
+                                </a>
+                                <ul class="dropdown-menu"  aria-labelledby="user-dropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="user_profile.html">
+                                            <div class="d-flex align-items-center my-2">
+                                                <img src="./resources/images/user/user.jpg" class="user-icon" alt="">
+                                                <div class="ms-2">
+                                                    <h6>Musab Osman</h6>
+                                                    <div class="text-small">
+                                                        musabosman3104@gmail.com
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <hr>
+                                    <li><a class="dropdown-item" href="user_settings.html">Settings</a></li>
+                                    <li><a class="dropdown-item" href="attendance.html">Attendance</a></li>
+                                    <li><a class="dropdown-item" href="change_password.html">Change Password</a></li>
+                                    <li><a class="dropdown-item" href="profile_gallery.html">Gallery</a></li>
+                                    <hr>
+                                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End header -->
+
+        <!-- form -->
+        <div class="container mt-5">
+            <h5>Block input</h5>
+            <div class="row g-3">
+
+                <!-- type text input -->
+                <div class="col-6">
+                    <label for="text" class="form-label required">Type text</label>
+                    <input type="text" name="#" class="form-control" id="text" placeholder="Type text" required>
+                </div>
+
+
+                <!-- type date input -->
+                <div class="col-6">
+                    <label for="date" class="form-label required">Type date</label>
+                    <input type="date" name="#" class="form-control" id="date" required>
+                </div>
+
+                <!-- type email input -->
+                <div class="col-6">
+                    <label for="email" class="form-label required">Type email</label>
+                    <input type="email" name="#" class="form-control" id="email" placeholder="Type email" required>
+                </div>
+
+
+                <!-- type file input -->
+                <div class="col-6">
+                    <label for="formFile" class="form-label required">File input</label>
+                    <input type="file" name="#" class="form-control" id="formFile" required>
+                </div>
+
+
+                <!-- type select input -->
+                <div class="col-6">
+                    <label for="select" class="form-label required">select</label>
+                    <select name="#" class="form-select" id="select">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+
+
+                <!-- type password input -->
+                <div class="col-6">
+                    <label for="password" class="form-label required">Type password</label>
+                    <div class="input-group">
+                        <input type="password" name="password" class="form-control" id="password"
+                            placeholder="type password" required>
+                        <a href="#" class="pass-eye" onclick="show()"><i class="fas fa-eye"></i></a>
+                    </div>
+                </div>
+
+
+                <!-- input group -->
+                <div class="col-6">
+                    <label for="input-group" class="form-label required">Input-group</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" name="#" class="form-control" id="input-group" placeholder="Username">
+                    </div>
+                </div>
+
+
+
+                <!-- Validathion -->
+                <!-- valid input -->
+                <div class="col-6">
+                    <input type="text" name="#" class="form-control is-valid" placeholder="Hello world!" required>
+                    <div class="valid-feedback"> Looks good!</div>
+                </div>
+
+                <!-- invalid input -->
+                <div class="col-6">
+                    <input type="text" name="#" class="form-control is-invalid" placeholder="Hello world!" required>
+                    <div id="validationServerUsernameFeedback" class="invalid-feedback">Please choose a Last name.</div>
+                </div>
+
+
+                <!-- textarea -->
+                <div class="col-12">
+                    <label for="textarea" class="form-label">Textarea</label>
+                    <textarea name="textarea" class="form-control" id="textarea" placeholder="Textarea"
+                        rows="5"></textarea>
+                </div>
+
+
+
+                <!-- type checkbox input -->
+                <div class="col-6">
+                    <div class="form-check">
+                        <input type="checkbox" name="#" class="form-check-input" id="flexCheckDefault" value="">
+                        <label class="form-check-label" for="flexCheckDefault"> Default checkbox </label>
+                    </div>
+                </div>
+
+
+                <!-- type radio input -->
+                <div class="col-6">
+                    <div class="d-flex">
+                        <div class="form-check">
+                            <input type="radio" name="flexRadioDefault" class="form-check-input" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1"> Default radio</label>
+                        </div>
+                        <div class="form-check ms-3">
+                            <input type="radio" name="flexRadioDefault" class="form-check-input" id="flexRadioDefault2"
+                                checked>
+                            <label class="form-check-label" for="flexRadioDefault2"> Default checked radio</label>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <br><br><br>
+
+
+            <!-- inline input -->
+            <h5 class="mb-2">Inline input</h5>
+            <div class="row g-3">
+
+
+                <!-- type text -->
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="inline-text" class="form-label required mt-1">Type text</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" name="#" class="form-control" id="inline-text" placeholder="text"
+                                required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- type email -->
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="inline-email" class="form-label required mt-1">Type email</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="email" name="#" class="form-control" id="inline-email" placeholder="email"
+                                required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- type date -->
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="inline-date" class="form-label required mt-1">Type date</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="date" name="#" class="form-control" id="inline-date" required>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- type file -->
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="inline-formFile" class="form-label required mt-1">File input</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="file" name="#" class="form-control" id="inline-formFile" required>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- type select -->
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="inline-select" class="form-label required mt-1">select</label>
+                        </div>
+                        <div class="col-10">
+                            <select name="#" class="form-select" id="inline-select">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- textarea -->
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="inline-textarea" class="form-label">Textarea</label>
+                        </div>
+                        <div class="col-10">
+                            <textarea name="textarea" class="form-control" id="inline-textarea" placeholder="Textarea"
+                                rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <br><br><br><br>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

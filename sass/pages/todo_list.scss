@@ -1,0 +1,35 @@
+// Variables
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.todo-wrapper{
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    .todo-header{
+        h2{
+            color: $secondary-color;
+            margin-bottom: 20px;
+        }
+    }
+    .list-group{
+        border: none;
+        border-radius: 0;
+        .list-group-item{
+            margin-top: 20px;
+            border: 1px solid $border-color;
+            cursor: pointer;
+            @include flex-box($align-items: center);
+            input[type="checkbox"]{
+                margin-top: 0;
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+                &:checked ~ span{
+                    text-decoration: line-through;
+                    color: $gray-color;
+                }
+            }
+        }
+    }
+}

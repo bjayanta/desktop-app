@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Todo list | MaxSOP</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="resources/images/logos/icon-logo.svg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- master style -->
+    <link rel="stylesheet" href="css/master.css">
+    <!-- Todo list style -->
+    <link rel="stylesheet" href="css/pages/todo_list.css">
+</head>
+
+<body>
+
+    <!-- sidebar -->
+    <aside class="page-aside hide">
+        <!-- accordion menu -->
+
+        <!-- aside brand -->
+        <div class="aside-brand">
+            <a href="dashboard.html">
+                <img src="./resources/images/logos/logo_with_name.svg" alt="">
+            </a>
+        </div>
+        <!-- End aside-brand -->
+
+        <ul class="accordion" id="asideAccordion">
+            <h6 class="ps-3 pb-1">Basic</h6>
+            <li class="accordion-item">
+                <a href="dashboard.html" class="sigle-nav-link">
+                    <i class="bi bi-house"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#purchase"
+                    aria-expanded="false" aria-controls="purchase">
+                    <i class="bi bi-bag"></i>
+                    <span>Purchase</span>
+                </a>
+
+                <ul id="purchase" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                    data-bs-parent="#asideAccordion">
+                    <li><a href="purchase_records.html" class="nav-link">All Records</a></li>
+                    <li><a href="purchase_entry.html" class="nav-link">New Entry</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sale"
+                    aria-expanded="false" aria-controls="sale">
+                    <i class="bi bi-cart3"></i>
+                    <span>Sales</span>
+                </a>
+
+                <ul id="sale" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#asideAccordion">
+                    <li><a href="sale_records.html" class="nav-link">All Records</a></li>
+                    <li><a href="sale_entry.html" class="nav-link">New Entry</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#parties"
+                    aria-expanded="false" aria-controls="parties">
+                    <i class="bi bi-people"></i>
+                    <span>Parties</span>
+                </a>
+
+                <ul id="parties" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#asideAccordion">
+                    <li><a href="supplier.html" class="nav-link">Supplier</a></li>
+                    <li><a href="customer.html" class="nav-link">Customer</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#stock"
+                    aria-expanded="false" aria-controls="stock">
+                    <i class="bi bi-inboxes"></i>
+                    <span>Stock</span>
+                </a>
+
+                <ul id="stock" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#asideAccordion">
+                    <li><a href="supplier.html" class="nav-link">Supplier</a></li>
+                    <li><a href="customer.html" class="nav-link">Customer</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#banking"
+                    aria-expanded="false" aria-controls="banking">
+                    <i class="bi bi-credit-card"></i>
+                    <span>Banking</span>
+                </a>
+
+                <ul id="banking" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#asideAccordion">
+                    <li><a href="bank_transaction.html" class="nav-link">All Transaction</a></li>
+                    <li><a href="bank_entry.html" class="nav-link">New Entry</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#components"
+                    aria-expanded="false" aria-controls="components">
+                    <i class="bi bi-code-slash"></i>
+                    <span>Components</span>
+                </a>
+
+                <ul id="components" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#asideAccordion">
+                    <li><a href="table.html" class="nav-link">Table</a></li>
+                    <li><a href="form.html" class="nav-link">Form</a></li>
+                    <li><a href="icon.html" class="nav-link">Icon</a></li>
+                    <li><a href="button.html" class="nav-link">Button</a></li>
+                    <li><a href="accordion.html" class="nav-link">Accordion</a></li>
+                </ul>
+            </li>
+
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#media"
+                    aria-expanded="false" aria-controls="media">
+                    <i class="bi bi-film"></i>
+                    <span>Media</span>
+                </a>
+
+                <ul id="media" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#asideAccordion">
+                    <li><a href="media_upload.html" class="nav-link">Upload</a></li>
+                    <li><a href="media_gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="media_album.html" class="nav-link">Album</a></li>
+                </ul>
+            </li>
+            <li class="accordion-item">
+                <a href="#" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#pages"
+                    aria-expanded="false" aria-controls="pages">
+                    <i class="bi bi-file-earmark-break"></i>
+                    <span>Pages</span>
+                </a>
+
+                <ul id="pages" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#asideAccordion">
+                    <li><a href="voucher.html" class="nav-link">Voucher</a></li>
+                    <li><a href="invoice.html" class="nav-link">Invoice</a></li>
+                    <li><a href="gate_pass.html" class="nav-link">Gate Pass </a></li>
+                    <li><a href="coming_soon_basic.html" class="nav-link">Basic Coming Soon</a></li>
+                    <li><a href="countdown_coming_soon.html" class="nav-link">Countdown Coming Soon</a></li>
+                    <li><a href="screen_lock.html" class="nav-link">Screen Lock</a></li>
+                    <li><a href="preloader.html" class="nav-link">Preloader</a></li>
+                    <li><a href="empty_page.html" class="nav-link">Empty Page </a></li>
+                    <li><a href="under_construction.html" class="nav-link">Under Construction</a></li>
+                    <li><a href="404.html" class="nav-link">404 Erorr</a></li>
+                    <li><a href="500.html" class="nav-link">500 Erorr</a></li>
+                    <li><a href="503.html" class="nav-link">503 Erorr</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <!-- End sidebar -->
+
+    <!-- page-aside-layer -->
+    <div class="page-aside-layer show"></div>
+
+
+    <section class="mainbar expand">
+        <header>
+            <nav class="navbar page-navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <!-- Aside expand button -->
+                    <div class="expand-button">
+                        <button class="btn btn-success p-1" onclick="asideExpand()">
+                            <i class="bi bi-list-nested"></i>
+                        </button>
+                    </div>
+                    <!-- End aside expand button -->
+
+                    <!-- dark button -->
+                    <button class="btn cuttom-btn btn-light btn-sm p-0 dark-button ms-auto"><i class="bi bi-moon"></i></button>
+                    <!-- End dark button -->
+
+                    <!-- Responsive button -->
+                    <button class="navbar-toggler p-1 ms-auto" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <!-- End responsive button -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav my-2 text-end ms-auto mb-lg-0 py-3 py-lg-0">
+                            <!-- Help -->
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">
+                                    <span class=" me-3 me-lg-1">Help</span>
+                                    <i class="bi bi-info-circle"></i>
+                                </a>
+                            </li>
+                            <!-- Search -->
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" id="search-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Search</span>
+                                    <i class="bi bi-search"></i>
+                                </a>
+                                <div class="dropdown-menu search-dropdown p-2"  aria-labelledby="search-dropdown">
+                                    <form action="#">
+                                        <input type="text" class="form-control" placeholder="Search ....">
+                                        <button class="btn" type="submit"><i class="bi bi-search"></i></button>
+                                    </form>
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <i class="bi bi-search"></i>
+                                            <span>Dapibus ac facilisis in</span>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <i class="bi bi-search"></i>
+                                            <span>Dapibus ac facilisis in</span>
+                                        </a>
+                                        <a href="#" class="list-group-item list-group-item-action">
+                                            <i class="bi bi-search"></i>
+                                            <span>Dapibus ac facilisis in</span>
+                                        </a>
+                                      </div>
+                                </div>
+                            </li>
+                            <!-- Notification -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="notification-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Notification</span>
+                                    <i class="bi bi-bell"></i>
+                                </a>
+                                <ul class="dropdown-menu notification-dropdown py-2" aria-labelledby="notification-dropdown">
+                                    <h5 class="ms-3 mb-1">Notification</h5>
+                                    <hr>
+                                    <li><a class="dropdown-item " href="#">Dapibus ac facilisis in</a></li>
+                                    <li><a class="dropdown-item " href="#">Morbi leo risus</a></li>
+                                    <li><a class="dropdown-item " href="#">Porta ac consectetur ac</a></li>
+                                    <li><a class="dropdown-item " href="#">Vestibulum at eros</a></li>
+                                    <hr>
+                                    <div class="text-center mt-1">
+                                        <a href="#">See all</a>
+                                    </div>
+                                    
+                                </ul>
+                            </li>
+                            <!-- Settings -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link " href="#"  id="settings-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Settings</span>
+                                    <i class="bi bi-gear"></i>
+                                </a>
+
+                                <div class="dropdown-menu settings-dropdown"  aria-labelledby="settings-dropdown">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Company </strong></li>
+                                                <li class="list-group-item"><a href="about_us.html" class="list-group-item-action">About Us</a></li>
+                                                <li class="list-group-item"><a href="services.html" class="list-group-item-action">Services</a></li>
+                                                <li class="list-group-item"><a href="terms.html" class="list-group-item-action">Terms & Conditions</a></li>
+                                                <li class="list-group-item"><a href="asked_question.html" class="list-group-item-action">FAQs</a></li>
+                                                <li class="list-group-item"><a href="license.html" class="list-group-item-action">License</a></li>
+                                                <li class="list-group-item"><a href="copyright.html" class="list-group-item-action">Copyright</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Cras justo odio</strong></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Cras justo odio</strong></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-3">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item pb-2"><strong>Cras justo odio</strong></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                                <li class="list-group-item"><a href="#" class="list-group-item-action">Cras justo odio</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="user-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="d-lg-none me-3">Profile</span>
+                                    <i class="bi bi-person"></i>
+                                </a>
+                                <ul class="dropdown-menu"  aria-labelledby="user-dropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="user_profile.html">
+                                            <div class="d-flex align-items-center my-2">
+                                                <img src="./resources/images/user/user.jpg" class="user-icon" alt="">
+                                                <div class="ms-2">
+                                                    <h6>Musab Osman</h6>
+                                                    <div class="text-small">
+                                                        musabosman3104@gmail.com
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <hr>
+                                    <li><a class="dropdown-item" href="user_settings.html">Settings</a></li>
+                                    <li><a class="dropdown-item" href="attendance.html">Attendance</a></li>
+                                    <li><a class="dropdown-item" href="change_password.html">Change Password</a></li>
+                                    <li><a class="dropdown-item" href="profile_gallery.html">Gallery</a></li>
+                                    <hr>
+                                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- todo list -->
+        <section class="todo-wrapper py-5">
+            <div class="todo-header">
+                <h2>My To Do List</h2>
+                <div class="input-group">
+                    <input type="text" name="#" class="form-control" id="inputTodo" placeholder="Title...">
+                    <button class="btn custom-btn btn-success addTodoBtn px-4"> Add</button>
+                </div>
+            </div>
+
+            <ul class="list-group">
+                <label>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="#" class="form-check-input" value="">
+                        <span>Hit the gym</span>
+                        <button type="button" class="btn-close ms-auto"></button>
+                    </li>
+                </label>
+                <label>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="#" class="form-check-input" value="">
+                        <span>Pay bills</span>
+                        <button type="button" class="btn-close ms-auto"></button>
+                    </li>
+                </label>
+                <label>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="#" class="form-check-input" value="">
+                        <span>Meet George</span>
+                        <button type="button" class="btn-close ms-auto"></button>
+                    </li>
+                </label>
+                <label>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="#" class="form-check-input" value="">
+                        <span>Buy eggs</span>
+                        <button type="button" class="btn-close ms-auto"></button>
+                    </li>
+                </label>
+                <label>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="#" class="form-check-input" value="">
+                        <span>Read a book</span>
+                        <button type="button" class="btn-close ms-auto"></button>
+                    </li>
+                </label>
+                <label>
+                    <li class="list-group-item">
+                        <input type="checkbox" name="#" class="form-check-input" value="">
+                        <span>Organize office</span>
+                        <button type="button" class="btn-close ms-auto"></button>
+                    </li>
+                </label>
+            </ul>
+        </section>
+
+
+    </section>
+
+    <!-- Option 1: Bootstrap Bundle with Popper.js -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
