@@ -18,7 +18,7 @@
 
 .page-navbar{
     position: relative;
-    .options-dropdown{
+    .mega-menu{
         .button{
             a{
                 color: $black-color ;
@@ -28,7 +28,7 @@
                 }
             }
         }
-        .dropdown-menu{
+        .dropdown-menu {
             right: 0;
             left: 0;
             width: 100%;
@@ -36,7 +36,31 @@
             transition: ease .2s;
             padding:  10px 0 30px 0;
             border: none;
-            box-shadow: 0px 0px 30px rgba(51, 51, 51, 5%);
+            box-shadow: 0px 0px 30px rgba(51, 51, 51, 0.1);
+
+            ul {
+                list-style-type: none;
+                li {
+                    margin-bottom: 5px;
+                    a {
+                        color: $black-color;
+                        display: block;
+                        min-width: 200px;
+                        padding: 5px 10px;
+                        font-size: 14px;
+                        // border: 1px solid red !important;
+                        i, svg {
+                            line-height: 0;
+                            font-size: 20px;
+                            margin-right: 10px;
+                        }
+                        &:hover{
+                            text-decoration: none;
+                            color: $white-color;
+                            background-color: $primary-color;
+                        }
+                }   }
+            }
         }
     }
     
