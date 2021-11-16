@@ -38,7 +38,7 @@ export default class Navigation extends Component {
                                 <Link to="#">Modules </Link>
                             </div>
 
-                            <div className="dropdown-menu mt-3 show" aria-labelledby="services">
+                            <div className="dropdown-menu" aria-labelledby="services">
                                 <div className="container-fluid">
                                     <div className="d-flex justify-content-start align-items-start py-4">
                                         <ul className="p-0">
@@ -144,11 +144,10 @@ export default class Navigation extends Component {
                                         <div className="row">
                                             <div className="col-12 col-md-6 col-lg-3">
                                                 <ul className="list-group list-group-flush">
-                                                    <li className="list-group-item pb-2"><strong>Company </strong></li>
-                                                    <li className="list-group-item"><Link to="company_profile.html" className="list-group-item-action">Company Profile</Link></li>
-                                                    <li className="list-group-item"><Link to="employee_list.html" className="list-group-item-action">Employees</Link></li>
-                                                    <li className="list-group-item"><Link to="about_us.html" className="list-group-item-action">About Us</Link></li>
-                                                    <li className="list-group-item"><Link to="services.html" className="list-group-item-action" >Services</Link></li>
+                                                    <li className="list-group-item pb-2"><strong>Manage </strong></li>
+
+                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action">Group</Link></li>
+                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action">Subgroup</Link></li>
                                                 </ul>
                                             </div>
 

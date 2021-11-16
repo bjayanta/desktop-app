@@ -47,6 +47,7 @@ class Dashboard extends Component {
                         <li><Link to="#">e</Link></li>
                     </ul>
                 </Dropdown>
+                
             </AppLayout>
         )
     }

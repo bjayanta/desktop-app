@@ -20,7 +20,7 @@ export default class Aside extends Component {
                 <aside className={ `page-aside ${ this.props.isAsideOpen ? '' : 'hide' }` }>
                     {/* aside brand */}
                     <div className="aside-brand">
-                        <Link to="dashboard.html">
+                        <Link to="dashboard.html" className="d-block py-2">
                             <img src={ LogoWithName } alt="Logo with name" />
                         </Link>
                     </div>

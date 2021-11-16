@@ -37,7 +37,6 @@ class AppLayout extends Component {
 
                     {/* content */}
                     <div className="container">
-                        <h1>Dashboard</h1>
                         { this.props.children }
                     </div>
                     {/* content end */}
