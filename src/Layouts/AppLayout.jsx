@@ -32,7 +32,7 @@ class AppLayout extends Component {
                 {/* aside component end */}
 
                 {/* main container */}
-                <div className={ `mainbar ${ this.state.isSidebarOpen ? '' : 'expand' }` }>
+                <div className={ `mainbar ${ this.state.isSidebarOpen ? '' : 'expand' }` } style={ {position:'relative'} }>
                     <header>
                         {/* navbar */}
                         <Navigation toggleSidebar={ this.toggleSidebarHandler } />
@@ -46,14 +46,9 @@ class AppLayout extends Component {
                     {/* content end */}
 
                     {/* footer */}
-                    <footer className="container-fluid">
-                        <div className="d-flex justify-content-between py-2">
-                            <small>
-                                &copy; Copyright { this.state.year } | All Rights reserved by <Link to="https://shohozsales.com" target="_blank">Shohoz Sales</Link>
-                            </small>
-
-                            <small>Version 1.0.0</small>
-                        </div>
+                    <footer className="p-2" style={ {position:'fixed',bottom:0} }>
+                        <small>&copy; Copyright { this.state.year }. All Rights reserved by <Link to="https://shohozsales.com" target="_blank">Shohoz Sales</Link>. Version 1.0.0</small>
+                        <small></small>
                     </footer>
                     {/* footer end */}
                 </div>

@@ -25,10 +25,10 @@ export default class RouterArea extends Component {
                     <PrivateRoute exact path="/"><Dashboard /></PrivateRoute>
 
                     {/* manage user */}
-                    <PrivateRoute exact path="/user"><UserList /></PrivateRoute>
+                    <PrivateRoute exact path="/user/list"><UserList /></PrivateRoute>
                     <PrivateRoute exact path="/user/create"><UserForm /></PrivateRoute>
-                    <PrivateRoute exact path="/user/:id"><UserDetails /></PrivateRoute>
-                    <PrivateRoute exact path="/user/:id/edit"><UserForm /></PrivateRoute>
+                    <PrivateRoute exact path="/user/show/:id"><UserDetails /></PrivateRoute>
+                    <PrivateRoute exact path="/user/edit/:id"><UserForm /></PrivateRoute>
                     {/* manage user end */}
 
                     {/* Auth route */}

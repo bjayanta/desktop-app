@@ -1,5 +1,5 @@
 import React, { Component } from 'react' 
-import { Link, NavLink } from 'react-router-dom' 
+import { Link, NavLink, withRouter } from 'react-router-dom' 
 import { 
     House, 
     Bag, 
@@ -14,15 +14,19 @@ import {
     Book } from 'react-bootstrap-icons';
 import LogoWithName from '../assets/logos/logo_with_name.svg'
 
-export default class Aside extends Component {
+class Aside extends Component {
+
     render() {
+        const pathname = this.props.history.location.pathname.split("/");
+        console.log(pathname);
+
         return (
             <>
                 {/* sidebar */}
                 <aside className={ `page-aside ${ this.props.isAsideOpen ? '' : 'hide' }` }>
                     {/* aside brand */}
                     <div className="aside-brand">
-                        <Link to="dashboard.html" className="d-block py-2">
+                        <Link to="/" className="d-block py-2">
                             <img src={ LogoWithName } alt="Logo with name" />
                         </Link>
                     </div>
@@ -30,9 +34,9 @@ export default class Aside extends Component {
 
                     <ul className="accordion" id="asideAccordion">
                         <h6 className="ps-3 py-2">Basic</h6>
-                        
+
                         <li className="accordion-item">
-                            <Link to="#" className="sigle-nav-link active">
+                            <Link to="/" className={`sigle-nav-link ${pathname[1] === '' ? 'active' : ''}`}>
                                 <House />
                                 <span>Dashboard</span>
                             </Link>
@@ -165,14 +169,14 @@ export default class Aside extends Component {
                         </li>
 
                         <li className="accordion-item">
-                            <Link to="#" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#user" aria-expanded="false" aria-controls="user">
+                            <Link to="" className={`accordion-button ${pathname[1] === 'user' ? '' : 'collapsed'}`} data-bs-toggle="collapse" data-bs-target="#user" aria-expanded={(pathname[1] === 'user') ? 'true' : 'false'} aria-controls="user">
                                 <People />
                                 <span>Manage user</span>
                             </Link>
 
-                            <ul id="user" className="accordion-collapse collapse" aria-labelledby="headingUser" data-bs-parent="#asideAccordion">
-                                <li><NavLink to="/user" className="nav-link" activeClassName="active">All users</NavLink></li>
-                                <li><NavLink to="/user/form/12" className="nav-link" activeClassName="active">Create new</NavLink></li>
+                            <ul id="user" className={`accordion-collapse collapse ${pathname[1] === 'user' ? 'show' : ''}`} aria-labelledby="headingUser" data-bs-parent="#asideAccordion">
+                                <li><NavLink to="/user/list" className="nav-link" activeClassName={(pathname[2] === 'list') ? 'active' : ''}>All users</NavLink></li>
+                                <li><NavLink to="/user/create" className="nav-link" activeClassName={(pathname[2] === 'create') ? 'active' : ''}>Create new</NavLink></li>
                             </ul>
                         </li>
 
@@ -194,3 +198,5 @@ export default class Aside extends Component {
         )
     }
 }
+
+export default withRouter(Aside);
