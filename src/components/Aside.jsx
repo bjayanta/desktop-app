@@ -1,5 +1,5 @@
 import React, { Component } from 'react' 
-import { Link } from 'react-router-dom' 
+import { Link, NavLink } from 'react-router-dom' 
 import { 
     House, 
     Bag, 
@@ -9,7 +9,9 @@ import {
     CreditCard, 
     CodeSlash, 
     Film, 
-    FileEarmarkBreak } from 'react-bootstrap-icons';
+    FileEarmarkBreak, 
+    Gear, 
+    Book } from 'react-bootstrap-icons';
 import LogoWithName from '../assets/logos/logo_with_name.svg'
 
 export default class Aside extends Component {
@@ -147,6 +149,40 @@ export default class Aside extends Component {
                                 <li><Link to="503.html" className="nav-link">503 Erorr</Link></li>
                             </ul>
                         </li>
+
+                        <h6 className="ps-3 py-2">Configurations</h6>
+                        <li className="accordion-item">
+                            <Link to="#" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#settings" aria-expanded="false" aria-controls="settings">
+                                <Gear />
+                                <span>Settings</span>
+                            </Link>
+
+                            <ul id="settings" className="accordion-collapse collapse" aria-labelledby="headingSettings" data-bs-parent="#asideAccordion">
+                                <li><Link to="#" className="nav-link">Roll & Policy</Link></li>
+                                <li><Link to="#" className="nav-link">Group & Subgroup</Link></li>
+                                <li><Link to="#" className="nav-link">Unit converters</Link></li>
+                            </ul>
+                        </li>
+
+                        <li className="accordion-item">
+                            <Link to="#" className="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#user" aria-expanded="false" aria-controls="user">
+                                <People />
+                                <span>Manage user</span>
+                            </Link>
+
+                            <ul id="user" className="accordion-collapse collapse" aria-labelledby="headingUser" data-bs-parent="#asideAccordion">
+                                <li><NavLink to="/user" className="nav-link" activeClassName="active">All users</NavLink></li>
+                                <li><NavLink to="/user/form/12" className="nav-link" activeClassName="active">Create new</NavLink></li>
+                            </ul>
+                        </li>
+
+                        <li className="accordion-item">
+                            <Link to="#" className="sigle-nav-link">
+                                <Book />
+                                <span>User manual</span>
+                            </Link>
+                        </li>
+
                     </ul>
                 </aside>
                 {/* End sidebar */}

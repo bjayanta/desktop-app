@@ -1,24 +1,23 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { 
-    People, 
-    PersonVideo3,
     ListNested, 
-    BagCheck, 
-    BagDash,
-    Basket, 
-    Calculator, 
     ThreeDotsVertical, 
     InfoCircle, 
     Search, 
     Bell, 
-    Gear, 
-    Person,
-    Headset,
-    Folder } from 'react-bootstrap-icons';
+    Person } from 'react-bootstrap-icons';
 import Avatar from '../assets/avatar.jpg'
+import { auth } from '../services/authService'
+import ModuleNav from './ModuleNav'
 
-export default class Navigation extends Component {
+class Navigation extends Component {
+    logoutHandler = () => {
+        auth.logout(() => {
+            this.props.history.push('/login')
+        });
+    }
+
     render() {
         return (
             <>
@@ -33,34 +32,7 @@ export default class Navigation extends Component {
                         {/* aside expand button end */}
 
                         {/* services menu */}
-                        <div className="mega-menu ms-3">
-                            <div className="button dropdown-toggle" type="button" id="services" data-bs-toggle="dropdown" aria-expanded="false">
-                                <Link to="#">Modules </Link>
-                            </div>
-
-                            <div className="dropdown-menu" aria-labelledby="services">
-                                <div className="container-fluid">
-                                    <div className="d-flex justify-content-start align-items-start py-4">
-                                        <ul className="p-0">
-                                            <li><Link to="#"><BagCheck /> Purchase </Link></li>
-                                            <li><Link to="#"><Basket /> Sale </Link></li>
-                                            <li><Link to="#"><BagDash /> Expense </Link></li>
-                                            <li><Link to="#"><Headset /> Contacts </Link></li>
-                                        </ul>
-
-                                        <ul>
-                                            <li><Link to="#"><PersonVideo3 /> CRM </Link></li>
-                                            <li><Link to="#"><People /> HRM </Link></li>
-                                            <li><Link to="#"><Calculator /> Accounting </Link></li>
-                                        </ul>
-
-                                        <ul>
-                                            <li><Link to="#"><Folder />Manage </Link></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <ModuleNav />
                         {/* services menu end */}
 
                         {/* responsive button */}
@@ -133,55 +105,6 @@ export default class Navigation extends Component {
                                     </ul>
                                 </li>
 
-                                {/* Settings mega menu */}
-                                <li className="nav-item dropdown">
-                                    <Link to="#" className="nav-link" id="settings-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <span className="d-lg-none me-3">Settings</span>
-                                        <Gear />
-                                    </Link>
-
-                                    <div className="dropdown-menu settings-dropdown" aria-labelledby="settings-dropdown">
-                                        <div className="row">
-                                            <div className="col-12 col-md-6 col-lg-3">
-                                                <ul className="list-group list-group-flush">
-                                                    <li className="list-group-item pb-2"><strong>Manage </strong></li>
-
-                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action">Group</Link></li>
-                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action">Subgroup</Link></li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="col-12 col-md-6 col-lg-3">
-                                                <ul className="list-group list-group-flush">
-                                                    <li className="list-group-item pb-2"><strong>Cras justo odio</strong></li>
-                                                    <li className="list-group-item"><Link to="terms.html" className="list-group-item-action">Terms & Conditions</Link></li>
-                                                    <li className="list-group-item"><Link to="asked_question.html" className="list-group-item-action">FAQs</Link></li>
-                                                    <li className="list-group-item"><Link to="license.html" className="list-group-item-action">License</Link></li>
-                                                    <li className="list-group-item"><Link to="copyright.html" className="list-group-item-action">Copyright</Link></li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="col-12 col-md-6 col-lg-3">
-                                                <ul className="list-group list-group-flush">
-                                                    <li className="list-group-item pb-2"><strong>Cras justo odio</strong></li>
-                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action">Cras justo odio</Link></li>
-                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action" >Cras justo odio</Link></li>
-                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action">Cras justo odio</Link></li>
-                                                </ul>
-                                            </div>
-
-                                            <div className="col-12 col-md-6 col-lg-3">
-                                                <ul className="list-group list-group-flush">
-                                                    <li className="list-group-item pb-2"><strong>Cras justo odio</strong></li>
-                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action">Cras justo odio</Link></li>
-                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action">Cras justo odio</Link></li>
-                                                    <li className="list-group-item"><Link to="#" className="list-group-item-action">Cras justo odio</Link></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
                                 {/* user menu */}
                                 <li className="nav-item dropdown">
                                     <Link to="#" className="nav-link" id="user-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -208,7 +131,7 @@ export default class Navigation extends Component {
                                         <li><Link className="dropdown-item" to="attendance.html">Attendance</Link></li>
                                         <li><Link className="dropdown-item" to="change_password.html">Change Password</Link></li>
                                         <hr />
-                                        <li><Link className="dropdown-item" to="#">Log Out</Link></li>
+                                        <li><Link className="dropdown-item" to="#" onClick={ this.logoutHandler }>Log Out</Link></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -220,3 +143,5 @@ export default class Navigation extends Component {
         )
     }
 }
+
+export default withRouter(Navigation);

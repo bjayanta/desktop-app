@@ -18,15 +18,15 @@ require('@electron/remote/main').initialize()
 let win;
 
 function createWindow() {
-    const { screen } = require('electron');
-    const { width, height } = screen.getPrimaryDisplay().workAreaSize;
+    // const { screen } = require('electron');
+    // const { width, height } = screen.getPrimaryDisplay().workAreaSize;
 
     // Create the brower window.
     win = new BrowserWindow({
         title: "My Electron App",
         // titleBarStyle: 'hidden',
-        width: Math.round(width * 0.9),
-        height: Math.round(height * 0.9),
+        width: 1024, // Math.round(width * 0.6),
+        height: 768, // Math.round(height * 0.8),
         show: false,
         icon: path.join(__dirname, "maxsop.png"),
         // minWidth: 800,
@@ -41,9 +41,6 @@ function createWindow() {
         }
     });
 
-    // auto auto hide menubar
-    win.setAutoHideMenuBar(true);
-
     // create a new `splash`-Window 
     const splash = new BrowserWindow({
         width: 400, 
@@ -57,7 +54,7 @@ function createWindow() {
     // load splash screen 
     splash.loadURL(isDev ? `file://${path.join(__dirname, './splash.html')}` : `file://${path.join(__dirname, '../build/splash.html')}`);
 
-    // main window
+    // create main window
     // win.loadURL('http://localhost:3000');
     win.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
 
@@ -70,6 +67,10 @@ function createWindow() {
             splash.destroy();
             // splash.close();
             win.show();
+
+            // show with extra features
+            // win.setAutoHideMenuBar(true); // auto hide menubar
+            win.maximize(); // full screen 
         }, 3000);
     });
 }
@@ -92,10 +93,9 @@ app.on('active', function () {
 
 // ipc 
 ipcMain.on("toMain", (event, args) => {
-    let counter = args * 10;
-
+    
     // Send result back to renderer process
-    win.webContents.send("fromMain", counter);
+    win.webContents.send("fromMain", args);
 });
 
 // disable security warnings

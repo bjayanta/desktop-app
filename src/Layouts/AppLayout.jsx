@@ -1,15 +1,19 @@
 import React, { Component } from 'react'
 import Aside from '../components/Aside'
 import Navigation from '../components/Navigation'
+import { Link } from 'react-router-dom'
 
 class AppLayout extends Component {
 
     constructor(props) {
         super(props);
 
+        const date = new Date();
+
         // state
         this.state = {
-            isSidebarOpen: true
+            isSidebarOpen: true,
+            year: date.getFullYear()
         };
     }
 
@@ -36,10 +40,22 @@ class AppLayout extends Component {
                     </header>
 
                     {/* content */}
-                    <div className="container">
+                    <section className="container">
                         { this.props.children }
-                    </div>
+                    </section>
                     {/* content end */}
+
+                    {/* footer */}
+                    <footer className="container-fluid">
+                        <div className="d-flex justify-content-between py-2">
+                            <small>
+                                &copy; Copyright { this.state.year } | All Rights reserved by <Link to="https://shohozsales.com" target="_blank">Shohoz Sales</Link>
+                            </small>
+
+                            <small>Version 1.0.0</small>
+                        </div>
+                    </footer>
+                    {/* footer end */}
                 </div>
                 {/* main container end */}
             </>

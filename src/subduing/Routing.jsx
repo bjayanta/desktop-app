@@ -10,6 +10,10 @@ import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import Dashboard from "../pages/Dashboard";
 import PageNotFound from "../pages/PageNotFound";
+// manage users
+import UserList from '../pages/manage/user/List'
+import UserForm from '../pages/manage/user/Form'
+import UserDetails from '../pages/manage/user/Details'
 
 export default class RouterArea extends Component {
 
@@ -18,18 +22,18 @@ export default class RouterArea extends Component {
             <div>
                 <Switch>
                     {/* private route */}
-                    <PrivateRoute exact path="/">
-                        <Dashboard />
-                    </PrivateRoute>
+                    <PrivateRoute exact path="/"><Dashboard /></PrivateRoute>
+
+                    {/* manage user */}
+                    <PrivateRoute exact path="/user"><UserList /></PrivateRoute>
+                    <PrivateRoute exact path="/user/create"><UserForm /></PrivateRoute>
+                    <PrivateRoute exact path="/user/:id"><UserDetails /></PrivateRoute>
+                    <PrivateRoute exact path="/user/:id/edit"><UserForm /></PrivateRoute>
+                    {/* manage user end */}
 
                     {/* Auth route */}
-                    <AuthRoute exact path="/login">
-                        <Login />
-                    </AuthRoute>
-
-                    <AuthRoute exact path="/register">
-                        <Register />
-                    </AuthRoute>
+                    <AuthRoute exact path="/login"><Login /></AuthRoute>
+                    <AuthRoute exact path="/register"><Register /></AuthRoute>
 
                     {/* 404 */}
                     <Route component={ PageNotFound } />
