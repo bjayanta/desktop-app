@@ -13,6 +13,9 @@ require('electron-reload')(__dirname, {
 // in the main process:
 require('@electron/remote/main').initialize()
 
+// chnage app name
+app.setAppUserModelId("ShohozSales");
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
@@ -93,9 +96,9 @@ app.on('active', function () {
 
 // ipc 
 ipcMain.on("toMain", (event, args) => {
-    
     // Send result back to renderer process
     win.webContents.send("fromMain", args);
+    
 });
 
 // disable security warnings

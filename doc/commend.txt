@@ -44,3 +44,7 @@ How to Setup Electron With React and TailwindCSS
 ----------------------------------------------------------------------
 https://www.youtube.com/watch?v=ZsjgueodULk
 
+clear cache:
+-----------------------------------------
+yarn cache clean
+yarn cache clean --mirror
