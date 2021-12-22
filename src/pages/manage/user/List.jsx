@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import AppLayout from '../../../layouts/AppLayout'
+import PrintHead from '../../partials/PrintHead'
 
 export default class list extends Component {
     render() {
@@ -22,7 +23,7 @@ export default class list extends Component {
                 <div className="sale">
                     <div className="container">
                         {/* print header */}
-                        <div className="print-show print-header">
+                        {/* <div className="print-show print-header">
                             <div className="d-flex">
                                 <div>
                                     <h4>MaxSOP</h4>
@@ -33,7 +34,10 @@ export default class list extends Component {
                                     <p>5 December, 2020</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
+                        <PrintHead />
+
+                        
             
                         {/* table */}
                         <div className="card border-0">
